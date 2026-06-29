@@ -1,0 +1,475 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import {
+  Search,
+  ChevronDown,
+  ChevronUp,
+  Car,
+  Users,
+  Store,
+  ShieldCheck,
+  Headphones,
+  Smartphone,
+  Mail,
+  Phone,
+  Clock3,
+  IndianRupee,
+  UserRound,
+  CreditCard,
+} from "lucide-react";
+
+const categories = [
+  {
+    name: "General",
+    icon: Car,
+    color: "text-orange-500",
+    bg: "bg-orange-50",
+  },
+  {
+    name: "Renters",
+    icon: Car,
+    color: "text-slate-600",
+    bg: "bg-slate-100",
+  },
+  {
+    name: "Vehicle Owners",
+    icon: UserRound,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+  },
+  {
+    name: "Rental Shops",
+    icon: Store,
+    color: "text-violet-600",
+    bg: "bg-violet-50",
+  },
+  {
+    name: "Payments & Security",
+    icon: ShieldCheck,
+    color: "text-amber-500",
+    bg: "bg-amber-50",
+  },
+  {
+    name: "App & Account",
+    icon: Smartphone,
+    color: "text-sky-600",
+    bg: "bg-sky-50",
+  },
+  {
+    name: "Support",
+    icon: Headphones,
+    color: "text-pink-500",
+    bg: "bg-pink-50",
+  },
+];
+
+const faqs = [
+  {
+    category: "General",
+    question: "What is Swarikaro?",
+    answer:
+      "Swarikaro is a vehicle rental platform that connects vehicle owners, rental shops and customers for hourly and daily rentals.",
+  },
+  {
+    category: "Renters",
+    question: "How can I rent a vehicle?",
+    answer:
+      "Browse available vehicles, select your preferred vehicle, upload required documents and confirm your booking.",
+  },
+  {
+    category: "Renters",
+    question: "Can I rent a vehicle without a driver?",
+    answer:
+      "Yes. Depending on the vehicle and owner, you can rent with or without a driver.",
+  },
+  {
+    category: "Renters",
+    question: "What documents are required?",
+    answer:
+      "A valid Driving License, Aadhaar Card and any other verification requested by the owner.",
+  },
+  {
+    category: "Vehicle Owners",
+    question: "How can I list my vehicle?",
+    answer:
+      "Create an owner account, submit vehicle details and complete verification to start earning.",
+  },
+  {
+    category: "Payments & Security",
+    question: "How will I receive payments?",
+    answer:
+      "Payments are securely transferred to your registered bank account after booking completion.",
+  },
+  {
+    category: "Rental Shops",
+    question: "How do rental shops manage bookings?",
+    answer:
+      "Rental shops receive a dashboard to manage vehicles, bookings and customers easily.",
+  },
+  {
+    category: "Payments & Security",
+    question: "Is insurance provided?",
+    answer:
+      "Insurance depends on the listed vehicle and owner policy.",
+  },
+  {
+    category: "Support",
+    question: "How can I contact customer support?",
+    answer:
+      "Reach us via phone, email or the Contact Us page.",
+  },
+];
+
+export default function FAQContent() {
+  const [active, setActive] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState("General");
+  const [search, setSearch] = useState("");
+
+  const filteredFaqs = faqs.filter((item) => {
+    const matchesCategory =
+      selectedCategory === "General"
+        ? true
+        : item.category === selectedCategory;
+
+    const matchesSearch =
+      item.question.toLowerCase().includes(search.toLowerCase()) ||
+      item.answer.toLowerCase().includes(search.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <section className="bg-[#F8F4EE] py-16">
+      <div className="container mx-auto px-4 lg:px-8">
+
+        {/* Heading */}
+
+        <div className="text-center">
+         <div className="flex items-center justify-center gap-4 mb-5">
+  <div className="h-[2px] w-14 bg-[#FF7A00] rounded-full"></div>
+
+  <span className="text-[#FF7A00] text-sm font-bold uppercase tracking-wider">
+    FAQ
+  </span>
+
+  <div className="h-[2px] w-14 bg-[#FF7A00] rounded-full"></div>
+</div>
+
+          <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
+            Frequently Asked{" "}
+            <span className="text-orange-500">
+              Questions
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-2 max-w-2xl text-sm leading-7 text-slate-600">
+            Find answers to the most common questions about
+            Swarikaro. Can't find what you're looking for?
+            Contact our support team.
+          </p>
+        </div>
+
+        {/* Hero Card */}
+
+      
+<div className="mt-4 overflow-hidden rounded-[20px] border border-orange-100 bg-gradient-to-r from-[#FFF8F1] via-[#FFFDFB] to-[#FFF8F1] px-2 py-2 shadow-sm lg:px-10">
+  <div className="grid items-center  lg:grid-cols-[200px_1fr]">
+
+<div className="flex justify-center lg:justify-end lg:translate-x-16">
+  <Image
+    src="/faq/faq_boy.png"
+    alt="FAQ"
+    width={420}
+    height={500}
+    priority
+    className="w-full max-w-[420px] h-[340px] object-contain -translate-y-3"
+  />
+</div>
+
+    {/* Right */}
+    <div className="max-w-[560px] lg:ml-48">
+      <h3 className="text-[30px] font-bold text-[#29566A] lg:text-[30px]">
+        Have a question?
+      </h3>
+
+      <h4 className="mt-1 text-[22px] font-bold text-orange-500 lg:text-[26px]">
+        We're here to help!
+      </h4>
+
+      <div className="relative mt-5">
+        <Search
+          size={18}
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+        />
+
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search for answers..."
+          className="h-12 w-full rounded-xl border border-orange-100 bg-white pl-11 pr-4 text-sm outline-none focus:border-orange-500"
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+<div className="mb-5 mt-4 flex gap-2 overflow-x-auto pb-2 lg:hidden">
+  {categories.map((item) => {
+    const Icon = item.icon;
+
+    return (
+      <button
+        key={item.name}
+        onClick={() => setSelectedCategory(item.name)}
+        className={`flex items-center gap-2 whitespace-nowrap rounded-xl border px-4 py-2 text-sm font-medium ${
+          selectedCategory === item.name
+            ? "border-orange-500 bg-orange-500 text-white"
+            : "border-orange-100 bg-white text-[#29566A]"
+        }`}
+      >
+        <Icon size={16} />
+        {item.name}
+      </button>
+    );
+  })}
+</div>
+
+        {/* Main Layout */}
+
+      <div className="mt-8 grid gap-6 lg:grid-cols-[260px_1fr]">
+
+          {/* Sidebar */}
+<aside className="hidden space-y-6 lg:block">
+
+            <div className="rounded-3xl border border-orange-100 bg-white p-5 shadow-sm">
+
+              <h3 className="mb-2 text-lg font-bold text-[#29566A]">
+                Browse by Topic
+              </h3>
+
+            <div className="space-y-2">
+  {categories.map((item) => {
+    const Icon = item.icon;
+
+    return (
+      <button
+        key={item.name}
+        onClick={() => setSelectedCategory(item.name)}
+        className={`flex w-full items-center gap-2 rounded-2xl px-2 py-3 text-left transition ${
+          selectedCategory === item.name
+            ? "bg-orange-50"
+            : "hover:bg-orange-50"
+        }`}
+      >
+        <div
+          className={`flex h-10 w-10 items-center justify-center rounded-full ${item.bg}`}
+        >
+          <Icon size={20} className={item.color} />
+        </div>
+
+        <span
+          className={`text-sm font-medium ${
+            selectedCategory === item.name
+              ? "text-orange-500"
+              : "text-[#29566A]"
+          }`}
+        >
+          {item.name}
+        </span>
+      </button>
+    );
+  })}
+</div>
+
+            </div>
+                        {/* Mobile Categories */}
+          {/* Mobile Categories */}
+
+
+
+
+            {/* Need Help */}
+            <div className="hidden rounded-3xl border border-orange-100 bg-white p-5 shadow-sm lg:block">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50">
+                <Headphones
+                  className="text-orange-500"
+                  size={24}
+                />
+              </div>
+
+              <h3 className="mt-4 text-xl font-bold text-[#29566A]">
+                Still Need Help?
+              </h3>
+
+              <p className="mt-2 text-sm leading-7 text-slate-600">
+                Our support team is always ready to assist you.
+              </p>
+
+              <div className="mt-6 space-y-3">
+
+                <a
+                  href="mailto:hello@swarikaro.com"
+                  className="flex items-center gap-3 rounded-xl border border-orange-100 p-3 text-sm hover:bg-orange-50"
+                >
+                  <Mail
+                    size={18}
+                    className="text-orange-500"
+                  />
+                  hello@swarikaro.com
+                </a>
+
+                <a
+                  href="tel:+919999999999"
+                  className="flex items-center gap-3 rounded-xl border border-orange-100 p-3 text-sm hover:bg-orange-50"
+                >
+                  <Phone
+                    size={18}
+                    className="text-orange-500"
+                  />
+                  +91 99999 99999
+                </a>
+
+              </div>
+
+              <button className="mt-6 w-full rounded-xl bg-orange-500 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                Contact Support
+              </button>
+            </div>
+
+          </aside>
+
+          {/* FAQ */}
+
+          <div className="space-y-4">
+
+            {filteredFaqs.map((faq, index) => {
+
+              const open = active === index;
+
+              return (
+
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm"
+                >
+
+                 <button
+  type="button"
+  onClick={() =>
+    setActive(open ? -1 : index)
+  }
+                   className="flex w-full cursor-pointer items-center justify-between p-4 text-left md:p-5">
+
+                    <div className="flex items-center gap-4">
+
+                      <div
+  className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-white transition-all duration-300 ${
+    open ? "bg-orange-500" : "bg-[#29566A]"
+  }`}
+>
+  Q
+</div>
+
+<h3
+  className={`text-base font-semibold transition-colors duration-300 ${
+    open ? "text-orange-500" : "text-[#29566A]"
+  }`}
+>
+  {faq.question}
+</h3>
+
+                    </div>
+
+                    {open ? (
+                      <ChevronUp className="text-orange-500" />
+                    ) : (
+                      <ChevronDown className="text-slate-500" />
+                    )}
+
+                  </button>
+
+                  {open && (
+                <div className="border-t border-orange-100 bg-white px-5 py-5">
+  <div className="rounded-xl bg-orange-50/40 px-6 py-5">
+    <p className="text-sm leading-7 text-slate-600">
+      {faq.answer}
+    </p>
+  </div>
+</div>
+                  )}
+
+                </div>
+
+              );
+
+            })}
+
+          </div>
+
+        </div>
+
+        {/* Bottom Features */}
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+
+          {[
+            {
+              icon: ShieldCheck,
+              title: "Trusted Platform",
+              desc: "Safe, secure and verified users.",
+            },
+            {
+              icon: Clock3,
+              title: "Flexible Options",
+              desc: "Hourly or daily rentals.",
+            },
+            {
+              icon: Headphones,
+              title: "24/7 Support",
+              desc: "We're here anytime you need us.",
+            },
+            {
+              icon: IndianRupee,
+              title: "Best Prices",
+              desc: "Affordable rates and great deals.",
+            },
+          ].map((item, index) => {
+
+            const Icon = item.icon;
+
+            return (
+
+              <div
+                key={index}
+                className="rounded-2xl border border-orange-100 bg-white p-4 text-center shadow-sm"
+              >
+
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-orange-50">
+                  <Icon
+                    className="text-orange-500"
+                    size={26}
+                  />
+                </div>
+
+                <h3 className="mt-4 text-lg font-semibold text-[#29566A]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {item.desc}
+                </p>
+
+              </div>
+
+            );
+
+          })}
+
+        </div>
+
+      </div>
+    </section>
+  );
+}

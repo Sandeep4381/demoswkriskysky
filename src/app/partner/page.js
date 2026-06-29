@@ -1,0 +1,58 @@
+import { Hero } from "@/components/whySwariKaro/Hero_part";
+import { WhyPartner } from "@/components/whySwariKaro/WhyPartner";
+import { HowItWorks } from "@/components/whySwariKaro/HowWorks";
+import { Benefits } from "@/components/whySwariKaro/Benefits";
+
+export const metadata = {
+  title: "Become a Partner | Swarikaro",
+  description:
+    "Partner with Swarikaro and earn by listing your vehicle. Join our growing network of trusted mobility partners across India.",
+  keywords: [
+    "Swarikaro Partner",
+    "Vehicle Partner",
+    "Car Rental Partner",
+    "Taxi Partner",
+    "Fleet Partner",
+    "Vehicle Owner",
+    "Earn with Car",
+    "Become a Partner",
+  ],
+  openGraph: {
+    title: "Become a Partner | Swarikaro",
+    description:
+      "Turn your vehicle into an earning opportunity. Join Swarikaro's trusted partner network.",
+    url: "https://swarikaro.com/rent-partner",
+    siteName: "Swarikaro",
+    images: [
+      {
+        url: "/og-partner.jpg", // Place this image in /public
+        width: 1200,
+        height: 630,
+        alt: "Become a Partner - Swarikaro",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Become a Partner | Swarikaro",
+    description:
+      "List your vehicle on Swarikaro and start earning with trusted rentals.",
+    images: ["/og-partner.jpg"],
+  },
+  alternates: {
+    canonical: "https://swarikaro.com/rent-partner",
+  },
+};
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <Hero />
+      <WhyPartner />
+      <HowItWorks />
+      <Benefits />
+    </div>
+  );
+}
