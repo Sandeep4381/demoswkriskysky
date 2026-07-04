@@ -6,26 +6,26 @@ const steps = [
   {
     icon: UserPlus,
     step: "01",
-    title: "Sign Up",
-    description: "Register your vehicles and complete a simple verification process.",
+    title: "Register",
+    description: "Download the Swarikaro Partner App and create your partner account.",
   },
   {
     icon: Bell,
     step: "02",
-    title: "Get Requests",
-    description: "Receive booking notifications directly on your Partner App.",
+    title: "Complete Verification",
+    description: "Submit your business details, shop information, vehicle documents and verification details.",
   },
   {
     icon: Calendar,
     step: "03",
-    title: "Accept Bookings",
-    description: "Choose rides that fit your schedule and availability.",
+    title: "List Your Vehicles",
+    description: "Add your vehicles, set pricing, update availability and publish your listings.",
   },
   {
     icon: DollarSign,
     step: "04",
-    title: "Earn Money",
-    description: "Complete trips and receive timely payments directly to your account.",
+    title: "Start Receiving Bookings",
+    description: "Accept booking requests, hand over vehicles to customers and start earning through Swarikaro.",
   },
 ];
 

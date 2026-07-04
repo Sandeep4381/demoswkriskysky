@@ -5,28 +5,33 @@ import { Users, Smartphone, Car, TrendingUp, Shield } from "lucide-react";
 const benefits = [
   {
     icon: Users,
-    title: "Reach customers in your local area.",
-    description: "Connect with riders actively searching for reliable transportation in your community.",
+    title: "Reach More Local Customers.",
+    description: "Connect with users searching for rental and reservation vehicles near your business location.",
   },
   {
     icon: Smartphone,
-    title: "Receive booking requests through a dedicated Partner App.",
-    description: "Manage all your bookings, earnings, and vehicle details from one convenient mobile platform.",
+    title: "Manage Everything from One App.",
+    description: "Accept bookings, manage vehicles, update availability, view earnings and grow your business with the Swarikaro Partner App.",
   },
   {
     icon: Car,
-    title: "Manage vehicles and availability with ease.",
-    description: "Simple tools to update vehicle status, set schedules, and maximize your earning potential.",
+    title: "List Multiple Vehicles.",
+    description: "Whether you have one bike or an entire fleet, you can manage all your vehicles from a single account.",
   },
   {
     icon: TrendingUp,
-    title: "Grow your business with a trusted mobility platform.",
-    description: "Join thousands of partners already earning and building their business with Swarikaro.",
+    title: "Flexible Business Control.",
+    description: "Set your own pricing, manage availability, accept bookings and operate on your own schedule.",
   },
   {
     icon: Shield,
-    title: "Be part of India's next generation local mobility network.",
-    description: "Join a revolutionary platform that's transforming how India moves, one community at a time.",
+    title: "Earn More with Every Booking.",
+    description: "Turn idle vehicles into a steady source of income while expanding your customer reach.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Trusted & Verified Platform.",
+    description: "Partner with a platform focused on verified users, secure onboarding and transparent business practices.",
   },
 ];
 

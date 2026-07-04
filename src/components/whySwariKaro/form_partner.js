@@ -1,0 +1,268 @@
+"use client";
+
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  Headphones,
+  Loader2,
+  MapPin,
+  Phone,
+  User,
+} from "lucide-react";
+import { motion } from "motion/react";
+import { useState } from "react";
+
+const initialForm = {
+  name: "",
+  mobile: "",
+  city: "",
+  vehicleType: "",
+  vehicleCount: "",
+};
+
+const vehicleTypes = [
+  "Bike",
+  "Scooter",
+  "Car",
+  "SUV",
+  "Tempo Traveller",
+  "Taxi / Cab",
+  "Fleet / Multiple Types",
+];
+
+const benefits = [
+  "Early access",
+  "Priority visibility",
+  "Launch support",
+  "Reduced commission for first partners",
+];
+
+export function PartnerInterestForm() {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  const updateField = (event) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/partner-interest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result?.message || "Unable to submit the form.");
+      }
+
+      setForm(initialForm);
+      setStatus("success");
+      setMessage("Thank you. Our team will contact you shortly.");
+    } catch (error) {
+      setStatus("error");
+      setMessage(
+        error.message || "Something went wrong. Please try again in a moment.",
+      );
+    }
+  };
+
+  return (
+    <section
+      id="partner-interest"
+      className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fff7ed] via-background to-[#eef7f9]" />
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-soft">
+              <Building2 className="h-4 w-4" />
+              Partner Landing Page
+            </p>
+
+            <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
+              Grow Your Vehicle Business With{" "}
+              <span className="text-primary">Swarikaro</span>
+            </h2>
+
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/75 sm:text-lg">
+              Connect with travelers planning their journeys in advance.
+            </p>
+
+            <div className="mt-8">
+              <h3 className="text-xl font-bold text-secondary">
+                Become an Early Partner
+              </h3>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {benefits.map((benefit) => (
+                  <div
+                    key={benefit}
+                    className="flex items-center gap-3 rounded-lg border border-border bg-white px-4 py-3 shadow-soft"
+                  >
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-sm font-semibold text-secondary">
+                      {benefit}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.form
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            onSubmit={handleSubmit}
+            className="rounded-2xl border border-border bg-white p-5 shadow-xl sm:p-7 lg:p-8"
+          >
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-secondary">
+                Partner Interest Form
+              </h3>
+              <p className="mt-2 text-sm text-foreground/70">
+                Share your details and Swarikaro will reach out for onboarding.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block sm:col-span-2">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                  <User className="h-4 w-4 text-primary" />
+                  Name
+                </span>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={updateField}
+                  placeholder="Your full name"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                  <Phone className="h-4 w-4 text-primary" />
+                  Mobile
+                </span>
+                <input
+                  required
+                  type="tel"
+                  name="mobile"
+                  value={form.mobile}
+                  onChange={updateField}
+                  placeholder="10-digit number"
+                  pattern="[0-9+\-\s]{10,15}"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  City
+                </span>
+                <input
+                  required
+                  type="text"
+                  name="city"
+                  value={form.city}
+                  onChange={updateField}
+                  placeholder="Your city"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                  <Building2 className="h-4 w-4 text-primary" />
+                  Vehicle Type
+                </span>
+                <select
+                  required
+                  name="vehicleType"
+                  value={form.vehicleType}
+                  onChange={updateField}
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                >
+                  <option value="">Select type</option>
+                  {vehicleTypes.map((type) => (
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                  <Headphones className="h-4 w-4 text-primary" />
+                  Number of Vehicles
+                </span>
+                <input
+                  required
+                  min="1"
+                  type="number"
+                  name="vehicleCount"
+                  value={form.vehicleCount}
+                  onChange={updateField}
+                  placeholder="Example: 3"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                />
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-brand px-6 py-4 font-bold text-white shadow-premium transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {status === "loading"
+                ? <>
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Sending
+                  </>
+                : <>
+                    Become an Early Partner
+                    <ArrowRight className="h-5 w-5" />
+                  </>}
+            </button>
+
+            {message && (
+              <p
+                className={`mt-4 rounded-lg px-4 py-3 text-sm font-semibold ${
+                  status === "success"
+                    ? "bg-green-50 text-green-700"
+                    : "bg-red-50 text-red-700"
+                }`}
+              >
+                {message}
+              </p>
+            )}
+          </motion.form>
+        </div>
+      </div>
+    </section>
+  );
+}

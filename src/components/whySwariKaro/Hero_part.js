@@ -130,9 +130,10 @@ export function Hero() {
             className="text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
             style={{ color: "rgba(255,255,255,0.72)" }}
           >
-            Whether you own a single vehicle or manage an entire fleet, Swarikaro connects you
-            with people seeking trusted, convenient mobility. Join a growing network of local
-            partners and unlock consistent earnings.
+           Whether you own a single vehicle, manage a rental shop, or operate a fleet, Swarikaro helps you connect with customers looking for reliable rental and reservation services.
+ <br />
+ <br />List your vehicles, manage bookings, track earnings, and grow your business—all from one easy-to-use Partner App.
+           
           </motion.p>
 
           {/* Stats */}
@@ -145,7 +146,7 @@ export function Hero() {
             {[
               { value: "10,000+", label: "Active Partners" },
               { value: "50+", label: "Cities" },
-              { value: "₹25K+", label: "Avg Monthly" },
+             
             ].map((stat, i) => (
               <div key={stat.label} className="text-center lg:text-left relative">
                 {i > 0 && (
@@ -182,6 +183,7 @@ export function Hero() {
             >
               Download Partner App
             </motion.button>
+          
           </motion.div>
         </div>
       </div>

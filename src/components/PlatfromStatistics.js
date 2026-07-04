@@ -67,7 +67,11 @@ export default function PlatformStats() {
           {/* LEFT — Heading + illustration */}
           <div className="ps-intro">
             <span className="ps-eyebrow">Platform Statistics</span>
-            <h2 className="ps-title">
+            <h2 className="font-bold
+    leading-[1.05]
+    tracking-[-0.04em]
+    text-[#29566A]    
+    text-[clamp(2rem,4vw,5.8rem)]">
               Growing
               <br />
               <span className="ps-title-accent">

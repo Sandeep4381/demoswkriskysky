@@ -1,7 +1,9 @@
-import { Hero } from "@/components/whySwariKaro/Hero_part";
-import { WhyPartner } from "@/components/whySwariKaro/WhyPartner";
-import { HowItWorks } from "@/components/whySwariKaro/HowWorks";
 import { Benefits } from "@/components/whySwariKaro/Benefits";
+import { PartnerFaq } from "@/components/whySwariKaro/faq_partner";
+import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
+import { Hero } from "@/components/whySwariKaro/Hero_part";
+import { HowItWorks } from "@/components/whySwariKaro/HowWorks";
+import { WhyPartner } from "@/components/whySwariKaro/WhyPartner";
 
 export const metadata = {
   title: "Become a Partner | Swarikaro",
@@ -21,7 +23,7 @@ export const metadata = {
     title: "Become a Partner | Swarikaro",
     description:
       "Turn your vehicle into an earning opportunity. Join Swarikaro's trusted partner network.",
-    url: "https://swarikaro.com/rent-partner",
+    url: "https://swarikaro.com/partner",
     siteName: "Swarikaro",
     images: [
       {
@@ -42,7 +44,7 @@ export const metadata = {
     images: ["/og-partner.jpg"],
   },
   alternates: {
-    canonical: "https://swarikaro.com/rent-partner",
+    canonical: "https://swarikaro.com/partner",
   },
 };
 
@@ -50,9 +52,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Hero />
+      <PartnerInterestForm />
       <WhyPartner />
       <HowItWorks />
       <Benefits />
+      <PartnerFaq />
     </div>
   );
 }
