@@ -1,3 +1,7 @@
+import {
+  buildBreadcrumbSchema,
+  JsonLd,
+} from "@/components/seo/structured-data";
 import PrivacyPolicy from "./privacy-policy";
 
 export const metadata = {
@@ -38,7 +42,7 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.swarikaro.com/privacy-policy",
+    canonical: "https://swarikaro.com/privacy-policy",
   },
   robots: {
     index: true,
@@ -47,5 +51,15 @@ export const metadata = {
 };
 
 export default function PrivacyPolicyPage() {
-  return <PrivacyPolicy />;
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", item: "https://swarikaro.com" },
+    { name: "Privacy Policy", item: "https://swarikaro.com/privacy-policy" },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <PrivacyPolicy />
+    </>
+  );
 }

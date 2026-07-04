@@ -1,3 +1,7 @@
+import {
+  buildBreadcrumbSchema,
+  JsonLd,
+} from "@/components/seo/structured-data";
 import TermsContent from "./TermsContent";
 
 export const metadata = {
@@ -37,13 +41,12 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Terms & Conditions | Swarikaro",
-    description:
-      "Read the official Terms & Conditions of Swarikaro.",
+    description: "Read the official Terms & Conditions of Swarikaro.",
     images: ["/og-image.png"],
   },
 
   alternates: {
-    canonical: "https://www.swarikaro.com/terms-and-condition",
+    canonical: "https://swarikaro.com/terms-and-condition",
   },
 
   robots: {
@@ -53,5 +56,18 @@ export const metadata = {
 };
 
 export default function TermsPage() {
-  return <TermsContent />;
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", item: "https://swarikaro.com" },
+    {
+      name: "Terms & Conditions",
+      item: "https://swarikaro.com/terms-and-condition",
+    },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <TermsContent />
+    </>
+  );
 }

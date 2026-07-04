@@ -1,3 +1,7 @@
+import {
+  buildBreadcrumbSchema,
+  JsonLd,
+} from "@/components/seo/structured-data";
 import AboutContent from "./AboutContent";
 
 export const metadata = {
@@ -61,5 +65,15 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutContent />;
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", item: "https://swarikaro.com" },
+    { name: "About", item: "https://swarikaro.com/about" },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <AboutContent />
+    </>
+  );
 }

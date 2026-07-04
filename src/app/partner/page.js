@@ -1,3 +1,8 @@
+import {
+  buildBreadcrumbSchema,
+  buildServiceSchema,
+  JsonLd,
+} from "@/components/seo/structured-data";
 import { Benefits } from "@/components/whySwariKaro/Benefits";
 import { PartnerFaq } from "@/components/whySwariKaro/faq_partner";
 import { PartnerInterestForm } from "@/components/whySwariKaro/form_partner";
@@ -46,17 +51,36 @@ export const metadata = {
   alternates: {
     canonical: "https://swarikaro.com/partner",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function App() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", item: "https://swarikaro.com" },
+    { name: "Partner", item: "https://swarikaro.com/partner" },
+  ]);
+  const serviceSchema = buildServiceSchema({
+    name: "Swarikaro Partner Program",
+    description:
+      "List your vehicle on Swarikaro, manage bookings and grow your vehicle business with trusted mobility customers.",
+    url: "https://swarikaro.com/partner",
+    areaServed: "India",
+  });
+
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
-      <Hero />
-      <PartnerInterestForm />
-      <WhyPartner />
-      <HowItWorks />
-      <Benefits />
-      <PartnerFaq />
-    </div>
+    <>
+      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <div className="min-h-screen bg-background overflow-x-hidden">
+        <Hero />
+        <PartnerInterestForm />
+        <WhyPartner />
+        <HowItWorks />
+        <Benefits />
+        <PartnerFaq />
+      </div>
+    </>
   );
 }

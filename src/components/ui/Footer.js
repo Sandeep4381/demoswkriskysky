@@ -251,14 +251,14 @@ export default function Footer() {
               </div>
             </FooterSection>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               <FooterSection
                 id="follow"
                 title="Follow Us"
                 openSections={openSections}
                 onToggle={toggleSection}
               >
-                <div className="mt-5 flex flex-wrap gap-4 lg:gap-4">
+                <div className="mt-5 flex flex-wrap gap-3 lg:gap-3">
                   {socialLinks.map((item) => {
                     const Icon = item.icon;
 
@@ -269,9 +269,9 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={item.label}
-                        className={`flex h-12 w-12 items-center justify-center rounded-full text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 lg:h-14 lg:w-14 ${item.className}`}
+                        className={`flex h-6 w-6 items-center justify-center rounded-full text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 lg:h-14 lg:w-14 ${item.className}`}
                       >
-                        <Icon size={22} />
+                        <Icon size={18} />
                       </Link>
                     );
                   })}
@@ -283,7 +283,7 @@ export default function Footer() {
                 title="Our Promise"
                 openSections={openSections}
                 onToggle={toggleSection}
-                className="lg:border-t lg:border-white/[0.08] lg:pt-8"
+                className="lg:border-t lg:border-white/[0.08] lg:pt-4"
               >
                 <div className="mt-5 flex items-start gap-4">
                   <ShieldCheck className="h-12 w-12 shrink-0 text-orange-500" />
@@ -304,11 +304,9 @@ export default function Footer() {
                 title="Product by Mystrymind"
                 openSections={openSections}
                 onToggle={toggleSection}
-                className="lg:border-t lg:border-white/[0.08] lg:pt-8"
+                className="lg:border-t lg:border-white/[0.08] lg:pt-4"
               >
-                <div className="mt-5 text-2xl font-bold tracking-tight text-white">
-                  mystrymind
-                </div>
+                
               </FooterSection>
             </div>
           </div>

@@ -118,7 +118,7 @@ export default function App() {
     leading-[1.05]
     tracking-[-0.04em]
     text-[#29566A]
-    mt-18
+    mt-16
     
     text-[clamp(2rem,4vw,5.8rem)]
   "
