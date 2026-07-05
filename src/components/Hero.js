@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+import Link from "next/link";
 import { MapPin, ChevronRight, Menu, X, ArrowRight, Navigation, Clock, Users, Car, Download } from "lucide-react";
 
 /* ─── City images that cycle inside the phone ─── */
@@ -150,10 +150,13 @@ export default function App() {
                 <Download className="w-4 h-4" />
                 Download App
               </button>
-             <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
+                <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
+                  <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
   <Users className="w-4 h-4" />
   Become a Partner
 </button>
+                </Link>
+             
             </div>
 
             {/* Feature chips */}
