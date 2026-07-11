@@ -144,7 +144,7 @@ export default function FAQContent() {
     <section
         className="
     
-    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
+    relative    overflow-hidden  !py-16 lg:!py-20
   "
       >
      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />

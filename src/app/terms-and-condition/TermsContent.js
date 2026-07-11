@@ -250,7 +250,7 @@ export default function TermsContent() {
 <section
         className="
     
-    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
+    relative  overflow-hidden  !py-16 lg:!py-20
   "
       >
 
@@ -348,7 +348,7 @@ export default function TermsContent() {
               className="flex items-start gap-3"
             >
 
-              <span className="mt-[9px] h-2 w-2 rounded-full bg-orange-500"></span>
+              <span className="mt-[9px] h-2 w-2 rounded-full  bg-slate-600"></span>
 
              <p
                 className="text-xs sm:text-sm leading-relaxed text-slate-600"
@@ -415,7 +415,7 @@ export default function TermsContent() {
               className="flex items-start gap-3"
             >
 
-              <span className="mt-[9px] h-2 w-2 rounded-full bg-orange-500"></span>
+              <span className="mt-[9px] h-2 w-2 rounded-full  bg-slate-600"></span>
 
               <span className="text-[15px] leading-7 text-slate-600">
                 {point}

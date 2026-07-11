@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
          <section
         className="
     
-    relative   hero-wrapper overflow-hidden  
+    relative    overflow-hidden  
   "
       >
       
@@ -268,7 +268,7 @@ export default function PrivacyPolicy() {
                 <ul className="space-y-3">
                   {section.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <span className="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-orange-500" />
+                      <span className="mt-[9px] h-2 w-2 shrink-0 rounded-full  bg-slate-600" />
                        <p
                 className="text-xs sm:text-sm leading-relaxed text-slate-600"
                 
