@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SplashProvider from "@/components/ui/SplashProvider";
+import PageLoader from "@/components/ui/PageLoader";
+
 
 import {
   buildLocalBusinessSchema,
@@ -82,9 +85,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <JsonLd data={siteSchemas} />
+        <PageLoader />
         <Navbar />
 
-        {children}
+        <SplashProvider>
+          {children}
+        </SplashProvider>
         <Footer />
       </body>
     </html>

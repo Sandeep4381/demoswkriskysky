@@ -264,13 +264,13 @@ xl:grid-cols-3
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                       {section.number}
                     </div>
-                     <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
+                    <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                       {section.title}
                     </h4>
                   </div>
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-50">
-                    <Icon size={24} className="text-orange-500" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50">
+                    <Icon size={16} className="text-orange-500" />
                   </div>
                 </div>
 
@@ -308,9 +308,9 @@ xl:grid-cols-3
               <ShieldCheck size={24} className="text-orange-500" />
             </div>
             <div>
-              <p className="text-lg font-bold text-[#29566A]">
+              <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                 Thank you for visiting Swarikaro.
-              </p>
+              </h4>
               <p className="mt-1 text-[15px] font-medium text-slate-600">
                 Swarikaro - Apna Safar, Apne Log.
               </p>

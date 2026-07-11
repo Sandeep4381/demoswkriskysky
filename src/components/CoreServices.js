@@ -239,8 +239,8 @@ export default function CoreServices() {
                   i > 0 ? "lg:border-l lg:border-border lg:pl-6" : ""
                 }`}
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                  <Icon className="h-6 w-6" strokeWidth={2.2} />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--brand-soft)] text-[var(--brand)]">
+                  <Icon className="h-4 w-4" strokeWidth={2.2} />
                 </span>
                 <div>
                   <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">{item.title}</h4>

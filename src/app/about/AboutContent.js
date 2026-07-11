@@ -427,8 +427,8 @@ export default function AboutContent() {
 
               <div className="p-7">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
-                  <Car className="text-orange-500" size={28} />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100">
+                  <Car className="text-orange-500" size={20} />
                 </div>
 
                 <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
@@ -458,8 +458,8 @@ export default function AboutContent() {
 
               <div className="p-7">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
-                  <Store className="text-orange-500" size={28} />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100">
+                  <Store className="text-orange-500" size={20} />
                 </div>
 
                 <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
@@ -488,8 +488,8 @@ export default function AboutContent() {
 
               <div className="p-7">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
-                  <Users className="text-orange-500" size={28} />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100">
+                  <Users className="text-orange-500" size={20} />
                 </div>
 
                <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
@@ -530,7 +530,7 @@ export default function AboutContent() {
             <span className="h-px w-16 bg-orange-300" />
           </div>
 
-            <h2 className="mt-4 text-4xl font-bold text-[#29566A] lg:text-5xl">
+           <h2 className="mt-4 text-4xl font-bold text-[#29566A] lg:text-3xl">
               Growing Every
               <span className="text-orange-500"> Day</span>
             </h2>
