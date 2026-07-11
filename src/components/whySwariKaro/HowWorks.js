@@ -50,7 +50,7 @@ export function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative">
             {/* Connecting line for desktop */}
             <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -64,38 +64,40 @@ export function HowItWorks() {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="bg-card rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border h-full relative">
+                <div className="bg-card rounded-2xl p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border h-full min-h-[260px] relative">
                   {/* Step number badge */}
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.15 + 0.2 }}
-                    className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg"
+                    className="absolute -top-4 -right-4 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-lg"
                     style={{ background: 'var(--primary)' }}
                   >
                     <span className="text-sm">{step.step}</span>
                   </motion.div>
 
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.15 + 0.3 }}
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto"
-                    style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)' }}
-                  >
-                    <step.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                  </motion.div>
+                 <motion.div
+  initial={{ scale: 0 }}
+  whileInView={{ scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: index * 0.15 + 0.3 }}
+  className="mb-5 flex h-10 w-10 items-center justify-center rounded-2xl"
+  style={{
+    background:
+      "linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)",
+  }}
+>
+  <step.icon className="h-4 w-4 text-white" />
+</motion.div>
 
-                  <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2"> {step.title}
-                  </h4>
+                 <h4 className="mb-2 text-left text-sm font-bold text-slate-600 sm:text-base">
+  {step.title}
+</h4>
 
-                   
-
-                  <p className="text-sm sm:text-base text-slate-600 text-center leading-relaxed">
-                    {step.description}
-                  </p>
+<p className="text-left text-sm sm:text-base leading-relaxed text-slate-600">
+  {step.description}
+</p>
                 </div>
 
                 {/* Arrow connector for mobile/tablet */}

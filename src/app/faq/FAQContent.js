@@ -290,18 +290,18 @@ export default function FAQContent() {
 
             {/* Need Help */}
             <div className="hidden rounded-3xl border border-orange-100 bg-white p-5 shadow-sm lg:block">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50">
                 <Headphones
                   className="text-orange-500"
-                  size={24}
+                  size={16}
                 />
               </div>
 
-              <h3 className="mt-4 text-xl font-bold text-[#29566A]">
+                <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                 Still Need Help?
-              </h3>
+              </h4>
 
-              <p className="mt-2 text-sm leading-7 text-slate-600">
+              <p className="mt-2 text-sm leading-8 text-slate-600">
                 Our support team is always ready to assist you.
               </p>
 
@@ -444,18 +444,21 @@ export default function FAQContent() {
                 className="rounded-2xl border border-orange-100 bg-white p-4 text-center shadow-sm"
               >
 
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-orange-50">
+                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-orange-50">
                   <Icon
                     className="text-orange-500"
-                    size={26}
+                    size={16}
                   />
                 </div>
 
-                <h3 className="mt-4 text-lg font-semibold text-[#29566A]">
+               <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                   {item.title}
-                </h3>
+                </h4>
 
-                <p className="mt-2 text-sm leading-6 text-slate-600">
+                <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                   {item.desc}
                 </p>
 

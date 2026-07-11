@@ -69,10 +69,10 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-20">
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-18">
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export function Benefits() {
           Partner Opportunities
             <span className="h-px w-16 bg-orange-300" />
           </div>
-          <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl mt-2 font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
             Built for Every{" "}
             <span className="text-primary">Mobility Business</span>
           </h2>
@@ -102,8 +102,8 @@ export function Benefits() {
               whileHover={{ y: -6 }}
               className="rounded-xl border border-border bg-white p-5 shadow-soft transition-shadow hover:shadow-xl"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white">
-                <item.icon className="h-6 w-6" />
+              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+                <item.icon className="h-4 w-4" />
               </div>
               <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">{item.title}</h4>
               <p
@@ -138,8 +138,8 @@ export function Benefits() {
               transition={{ duration: 0.45, delay: index * 0.08 }}
               className="flex gap-4 rounded-xl border border-border bg-white p-5 shadow-soft sm:p-6"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-secondary text-white">
-                <benefit.icon className="h-6 w-6" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary text-white">
+                <benefit.icon className="h-4 w-4" />
               </div>
               <div>
                <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">

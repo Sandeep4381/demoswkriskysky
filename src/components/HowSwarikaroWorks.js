@@ -96,7 +96,7 @@ const sectionRef = useRef(null);
   return (
     <section
       ref={sectionRef}
-      className="relative py-18 lg:py-16 overflow-hidden"
+      className="relative py-16 lg:py-16 overflow-hidden"
       style={{ background: "bg-[#fbf7f0]" }}
     >
        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
@@ -245,7 +245,7 @@ const sectionRef = useRef(null);
       <div className="flex items-start gap-4">
         {/* Step Number */}
         <div
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl font-black text-sm transition-all duration-300"
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl text-slate-600 text-sm transition-all duration-300"
           style={{
             fontFamily: "'Bricolage Grotesque', sans-serif",
             background:
@@ -259,20 +259,20 @@ const sectionRef = useRef(null);
         </div>
 
         <div>
-          <p
-            className="mb-1 font-bold text-sm"
+         <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2"
             style={{
               fontFamily: "'Bricolage Grotesque', sans-serif",
-              color: activeStep === i ? "#29566A" : "#1F2937",
+              color: activeStep === i ? "#29566A" : "text-slate-600",
             }}
           >
             {step.title}
-          </p>
+          </h4>
 
-          <p
-            className="text-xs leading-relaxed"
+           <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
             style={{
-              color: activeStep === i ? "#4F6D7A" : "#6B7280",
+              color: activeStep === i ? "#4F6D7A" : "text-slate-600",
             }}
           >
             {step.desc}

@@ -71,10 +71,10 @@ export function WhyPartner() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6"
+                className="w-10 h-10 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center mb-4 sm:mb-6"
                 style={{ background: 'var(--primary)' }}
               >
-                <benefit.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                <benefit.icon className="w-4 h-4 sm:w-4 sm:h-4 text-white" />
               </motion.div>
 
                <h4

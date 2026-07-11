@@ -269,7 +269,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={item.label}
-                        className={`flex h-6 w-6 items-center justify-center rounded-full text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 lg:h-14 lg:w-14 ${item.className}`}
+                        className={`flex h-6 w-6 items-center justify-center rounded-full text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 lg:h-10 lg:w-10 ${item.className}`}
                       >
                         <Icon size={18} />
                       </Link>
@@ -286,10 +286,10 @@ export default function Footer() {
                 className="lg:border-t lg:border-white/[0.08] lg:pt-4"
               >
                 <div className="mt-5 flex items-start gap-4">
-                  <ShieldCheck className="h-12 w-12 shrink-0 text-orange-500" />
+                  <ShieldCheck className="h-8 w-8 shrink-0 text-orange-500" />
 
                   <div>
-                    <p className="text-lg font-extrabold leading-7 text-white lg:text-xl lg:leading-9">
+                    <p className="text-lg font-semibold leading-7 text-white lg:text-xl lg:leading-9">
                       Trusted. Local. People First.
                     </p>
                     <p className="mt-1 text-sm font-semibold text-white/60 lg:text-base">
@@ -312,7 +312,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/[0.08] pt-6">
+        <div className="mt-4 border-t border-white/[0.08] pt-6">
           <p className="text-left text-sm font-semibold text-white/58 md:text-center">
             &copy; 2026 Swarikaro - Apna Safar Apne Log. All rights reserved.
           </p>

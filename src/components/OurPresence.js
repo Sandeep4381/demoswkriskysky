@@ -23,19 +23,54 @@ const STATS = [
 ];
 
 const ACTIVE_CITIES = [
-  { name: "Delhi", left: 41.5, top: 30 },
-  { name: "Jaipur", left: 34.5, top: 36.5 },
-  { name: "Patna", left: 59.5, top: 41 },
-  { name: "Bhubaneswar", left: 62.5, top: 58 },
-  { name: "Darjeeling", left: 70, top: 37 },
+  {
+    name: "Delhi",
+    latitude: 28.6139,
+    longitude: 77.2090,
+  },
+  {
+    name: "Jaipur",
+    latitude: 26.9124,
+    longitude: 75.7873,
+  },
+  {
+    name: "Patna",
+    latitude: 25.5941,
+    longitude: 85.1376,
+  },
+  {
+    name: "Bhubaneswar",
+    latitude: 20.2961,
+    longitude: 85.8245,
+  },
+  {
+    name: "Darjeeling",
+    latitude: 27.0410,
+    longitude: 88.2663,
+  },
 ];
 
 const EXPANDING_CITIES = [
-  { name: "Manali", left: 39, top: 22.5 },
-  { name: "Rishikesh", left: 44.5, top: 27.5 },
-  { name: "Haridwar", left: 45, top: 29 },
-  { name: "Kerala", left: 42, top: 83 },
-  
+  {
+    name: "Manali",
+    latitude: 32.2396,
+    longitude: 77.1887,
+  },
+  {
+    name: "Rishikesh",
+    latitude: 30.0869,
+    longitude: 78.2676,
+  },
+  {
+    name: "Haridwar",
+    latitude: 29.9457,
+    longitude: 78.1642,
+  },
+  {
+    name: "Kochi",
+    latitude: 9.9312,
+    longitude: 76.2673,
+  },
 ];
 
 const FEATURES = [
@@ -202,7 +237,7 @@ export default function OurPresence() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-start mb-14 lg:mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-start mb-8 lg:mb-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

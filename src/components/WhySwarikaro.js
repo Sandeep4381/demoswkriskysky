@@ -252,44 +252,24 @@ export default function WhySwarikaro() {
                   >
                     {/* Icon */}
 
-                    <div className="mb-5 flex h-16 w-16 lg:h-20 lg:w-20 items-center justify-center rounded-full border border-orange-100 bg-orange-50/40">
+                    <div className="mb-5 flex h-10 w-10 lg:h-10 lg:w-10 items-center justify-center rounded-full border border-orange-100 bg-orange-50/40">
                       <Icon
-                        size={28}
-                        className="text-orange-500 lg:h-9 lg:w-9"
+                        size={16}
+                        className="text-orange-500 lg:h-6 lg:w-6"
                       />
                     </div>
 
                     {/* Title */}
-
-                    <h3
-                      className="
-    mt-2
-    min-h-[64px]
-    w-full
-    max-w-[170px]
-    mx-auto
-    text-[15px]
-    font-bold
-    leading-[1.3]
-    text-[#29566A]
-    text-center
-    text-balance
-  "
-                    >
+<h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                       {item.title}
-                    </h3>
+                    </h4>
 
                     {/* Description */}
 
                     <p
-                      className="
-    
-    max-w-[180px]
-    text-[14px]
-    
-    text-slate-600
-  "
-                    >
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                       {item.copy}
                     </p>
                   </div>
@@ -307,12 +287,12 @@ export default function WhySwarikaro() {
 
         {/* Stats */}
 
-        <div className="mt-10 border-t border-orange-100 pt-10">
+        <div className=" border-t border-orange-100 pt-6">
 
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 
             <div className="text-center">
-              <h4 className="text-2xl font-black text--foreground">
+              <h4 className="text-2xl font-black text-slate-600">
                 Location-First
               </h4>
 
@@ -322,7 +302,7 @@ export default function WhySwarikaro() {
             </div>
 
             <div className="text-center">
-              <h4 className="text-2xl font-black text --foreground">
+              <h4 className="text-2xl font-black text-slate-600">
                 Flexible
               </h4>
 
@@ -332,7 +312,7 @@ export default function WhySwarikaro() {
             </div>
 
             <div className="text-center">
-              <h4 className="text-2xl font-black text--foreground">
+              <h4 className="text-2xl font-black text-slate-600">
                 Advance
               </h4>
 
@@ -342,7 +322,7 @@ export default function WhySwarikaro() {
             </div>
 
             <div className="text-center">
-              <h4 className="text-2xl font-black text--foreground">
+              <h4 className="text-2xl font-black text-slate-600">
                 Trusted
               </h4>
 

@@ -229,10 +229,10 @@ export function PartnerInterestForm() {
             </div>
 
             <button
-              type="submit"
-              disabled={status === "loading"}
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-brand px-6 py-4 font-bold text-white shadow-premium transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
-            >
+  type="submit"
+  disabled={status === "loading"}
+  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-6 py-4 font-bold text-white shadow-premium transition hover:-translate-y-0.5 hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-70"
+>
               {status === "loading"
                 ? <>
                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -248,8 +248,8 @@ export function PartnerInterestForm() {
               <p
                 className={`mt-4 rounded-lg px-4 py-3 text-sm font-semibold ${
                   status === "success"
-                    ? "bg-green-50 text-green-700"
-                    : "bg-red-50 text-red-700"
+                    ? "--foreground success bg-success/10 text-success"
+                    : "--foreground-error  bg-error/10 text-error"
                 }`}
               >
                 {message}

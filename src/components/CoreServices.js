@@ -77,16 +77,19 @@ function FeatureChip({ icon: Icon, text }) {
         <Icon className="h-4 w-4" strokeWidth={2} />
       </span>
 
-      <span className="text-[12px] leading-snug text-slate-600">
+        <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
         {text}
-      </span>
+      </p>
     </div>
   );
 }
 
 export default function CoreServices() {
   return (
-    <section className="relative hero-wrapper overflow-hidden py-20 lg:py-20">
+    <section className="relative hero-wrapper overflow-hidden py-20 lg:py-18">
       {/* decorative blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
@@ -102,7 +105,10 @@ export default function CoreServices() {
           <h2 className="mt-5 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
             Travel Your Way. <span className="text-orange-500">We're With You.</span>
           </h2>
-          <p className="mt-3 text-lg leading-8 text-slate-600">
+            <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
             From self-drive rentals to chauffeur-led reservations — premium mobility built
             around your plans, your pace and your people.
           </p>
@@ -131,16 +137,16 @@ export default function CoreServices() {
               </span>
 
               <h3 className="mt-4 text-2xl font-bold text-[var(--brand)]">Rental Vehicle</h3>
-              <p className="mt-1.5 text-sm font-semibold text-foreground">
+              <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                 Plan today for the journeys of tomorrow.
-              </p>
+              </h4>
               <p className="mt-2 text-[13.5px] leading-relaxed text-slate-600">
                 Book rental vehicles in advance and search around your destination or stay
                 location.
               </p>
                 <div className="my-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/70">
                 <span className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
-                Suitable For
+                <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">Suitable For</h4>
                 <span className="h-px flex-1 bg-gradient-to-l from-transparent to-border" />
               </div>
 
@@ -237,8 +243,11 @@ export default function CoreServices() {
                   <Icon className="h-6 w-6" strokeWidth={2.2} />
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-slate-600">{item.title}</p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-slate-600">
+                  <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">{item.title}</h4>
+                   <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                     {item.copy}
                   </p>
                 </div>

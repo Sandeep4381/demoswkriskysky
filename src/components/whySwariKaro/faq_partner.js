@@ -50,7 +50,7 @@ export function PartnerFaq() {
           Partner FAQ
             <span className="h-px w-16 bg-orange-300" />
           </div>
-          <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl mt-2 font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
         </motion.div>

@@ -240,7 +240,12 @@ const terms = [
 
 export default function TermsContent() {
   return (
-    <main className="overflow-x-hidden py-16 sm:py-20 lg:py-20">
+     <section
+        className="
+    
+    relative    overflow-hidden  !py-16 lg:!py-20
+  "
+      >
  <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
@@ -437,7 +442,7 @@ export default function TermsContent() {
  </section>
 </div>
 
-</main>
+</section>
 
   );
 }
