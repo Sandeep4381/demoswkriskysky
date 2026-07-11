@@ -119,23 +119,7 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12 sm:mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 rounded-xl text-white text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)' }}
-          >
-            Get Started Now
-          </motion.button>
-        </motion.div>
+      
       </div>
     </section>
   );

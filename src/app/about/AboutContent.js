@@ -15,7 +15,7 @@ import {
 
 export default function AboutContent() {
   return (
-    <main className="py-12  lg:py-20">
+    <main >
 
       {/* Hero Section */}
       <section
@@ -28,7 +28,7 @@ export default function AboutContent() {
         <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
         <div className="container mx-auto px-4 lg:px-8">
 
-          <div className="grid items-start gap-10 lg:grid-cols-2">
+          <div className="grid items-start mt-10 gap-10 lg:grid-cols-2">
 
             {/* Left */}
             <div>

@@ -240,7 +240,7 @@ const terms = [
 
 export default function TermsContent() {
   return (
-    <main >
+    <main className="overflow-x-hidden py-16 sm:py-20 lg:py-20">
  <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
@@ -250,56 +250,20 @@ export default function TermsContent() {
 <section
         className="
     
-    relative  overflow-hidden  !py-16 lg:!py-20
+    relative  overflow-hidden 
   "
       >
 
-          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
+        <div className="mx-auto max-w-4xl px-4  text-center">
+   <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
+    Terms <span className="text-orange-500">and Conditions</span>
+  </h2>
 
-            {/* Left */}
-
-            <div>
-
-              <Image
-                src="/logo.png"
-                alt="Swarikaro"
-                width={220}
-                height={70}
-                className="h-auto"
-                priority
-              />
-
-              <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#183153] lg:text-4xl">
-                Terms{" "}
-                <span className="text-orange-500">
-                  and Conditions
-                </span>
-              </h1>
-
-              <p className="mt-2 text-lg leading-8 text-slate-600">
-                Please read these terms and conditions carefully
-                before using the Swarikaro website.
-              </p>
-
-            </div>
-
-            {/* Right */}
-
-            <div className="relative">
-
-              <Image
-                src="/terms.png"
-                alt="Terms & Conditions"
-                width={700}
-                height={520}
-                className="w-full"
-                priority
-              />
-
-            </div>
-
-          </div>
-
+  <p className="mt-5 text-lg leading-8 text-slate-600">
+    Please read these terms and conditions carefully before using the
+    Swarikaro website.
+  </p>
+</div>
        
 
         {/* Terms Grid starts here */}

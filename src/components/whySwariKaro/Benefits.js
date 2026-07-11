@@ -70,8 +70,8 @@ const benefits = [
 export function Benefits() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-background to-[#fff7ed]" />
-
+      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -80,10 +80,11 @@ export function Benefits() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-soft">
-            <Clock3 className="h-4 w-4" />
-            Partner Opportunities
-          </p>
+<div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-300" />
+          Partner Opportunities
+            <span className="h-px w-16 bg-orange-300" />
+          </div>
           <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
             Built for Every{" "}
             <span className="text-primary">Mobility Business</span>
@@ -104,8 +105,11 @@ export function Benefits() {
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-white">
                 <item.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-secondary">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">
+              <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">{item.title}</h4>
+              <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                 {item.description}
               </p>
             </motion.div>
@@ -138,10 +142,13 @@ export function Benefits() {
                 <benefit.icon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-secondary">
+               <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                   {benefit.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/70 sm:text-base">
+                </h4>
+                <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                   {benefit.description}
                 </p>
               </div>

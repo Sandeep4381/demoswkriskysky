@@ -172,7 +172,7 @@ const policySections = [
 
 export default function PrivacyPolicy() {
   return (
-    <main className="py-16 sm:py-20 lg:py-20">
+  <main className="overflow-x-hidden py-16 sm:py-20 lg:py-20">
      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
@@ -183,20 +183,12 @@ export default function PrivacyPolicy() {
   "
       >
       
-          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
+        <div className="grid items-center gap-8 p-5 sm:p-6 lg:grid-cols-2 lg:p-10">
             <div>
-              <Image
-                src="/logo.png"
-                alt="Swarikaro"
-                width={220}
-                height={70}
-                className="h-auto"
-                priority
-              />
-
-              <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#183153] lg:text-5xl">
+             
+               <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
                 Privacy <span className="text-orange-500">Policy</span>
-              </h1>
+              </h2>
 
                <p className="mt-3 text-lg leading-8 text-slate-600">
                 We value your privacy and are committed to protecting your
@@ -240,7 +232,18 @@ export default function PrivacyPolicy() {
           </div>
         </section>
 
-        <section className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+       <section
+className="
+relative
+overflow-hidden
+mt-8
+grid
+gap-6
+grid-cols-1
+md:grid-cols-2
+xl:grid-cols-3
+"
+>
          <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
           {policySections.map((section) => {
             const Icon = section.icon;

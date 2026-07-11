@@ -33,8 +33,9 @@ const faqs = [
 
 export function PartnerFaq() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-[#fff7ed] to-background" />
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-20">
+       <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
+
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -44,10 +45,11 @@ export function PartnerFaq() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-soft">
-            <HelpCircle className="h-4 w-4" />
-            Partner FAQ
-          </p>
+         <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-300" />
+          Partner FAQ
+            <span className="h-px w-16 bg-orange-300" />
+          </div>
           <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
@@ -66,10 +68,13 @@ export function PartnerFaq() {
               <div className="flex gap-4">
                 <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold text-secondary">
+                  <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                     {faq.question}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-foreground/75 sm:text-base">
+                  </h4>
+                     <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                     {faq.answer}
                   </p>
                 </div>
