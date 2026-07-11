@@ -59,14 +59,18 @@ const stats = [
 
 export default function PlatformStats() {
   return (
-    <section className="ps-section">
+    <section className="ps-section  hero-wrapper">
       <style>{css}</style>
-
+ <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
       <div className="ps-container">
         <div className="ps-grid">
           {/* LEFT — Heading + illustration */}
           <div className="ps-intro">
-            <span className="ps-eyebrow">Platform Statistics</span>
+           <div className="flex items-center  gap-4 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-300" />
+           Our Platform Statistics
+            <span className="h-px w-16 bg-orange-300" />
+          </div>
             <h2 className="font-bold
     leading-[1.05]
     tracking-[-0.04em]
@@ -124,10 +128,7 @@ const css = `
 .ps-section{
   position:relative;
   padding:clamp(48px,7vw,112px) clamp(16px,4vw,40px);
-  background:
-    radial-gradient(circle at 8% 12%, rgba(249,115,22,.10), transparent 38%),
-    radial-gradient(circle at 95% 90%, rgba(41,86,106,.08), transparent 40%),
-    linear-gradient(180deg,#fffaf3 0%,#fdf3e6 100%);
+ 
   overflow:hidden;
   font-family: var(--font-sans, "Inter", system-ui, sans-serif);
   color:#29566A;

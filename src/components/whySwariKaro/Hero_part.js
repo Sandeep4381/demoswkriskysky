@@ -41,7 +41,7 @@ export function Hero() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(180deg, rgba(13,34,51,0.6) 0%, transparent 20%, transparent 75%, rgba(13,34,51,0.7) 100%)",
+              "linear-gradient(180deg, rgba(13,34,51,0.6)  transparent 5%, transparent 1%, rgba(13,34,51,0.3) 20%)",
           }}
         />
         {/* Bottom into next section */}
@@ -64,7 +64,7 @@ export function Hero() {
               "linear-gradient(180deg, rgba(13,34,51,0.82) 0%, rgba(13,34,51,0.55) 50%, rgba(13,34,51,0.85) 100%)",
           }}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-5 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       {/* ── Ambient orange glow where image meets bg ── */}
@@ -144,8 +144,8 @@ export function Hero() {
             className="flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12 mb-10"
           >
             {[
-              { value: "10,000+", label: "Active Partners" },
-              { value: "50+", label: "Cities" },
+              { value: "50+", label: "Active Partners" },
+              { value: "10+", label: "Cities" },
              
             ].map((stat, i) => (
               <div key={stat.label} className="text-center lg:text-left relative">

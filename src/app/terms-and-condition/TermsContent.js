@@ -240,15 +240,21 @@ const terms = [
 
 export default function TermsContent() {
   return (
-    <main className="bg-[#F8F4EE] py-12">
-
+    <main >
+ <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
 
         {/* Hero */}
 
-        <section className="overflow-hidden rounded-[20px] border border-orange-100 bg-gradient-to-br ">
+<section
+        className="
+    
+    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
+  "
+      >
 
-          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-14">
+          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
 
             {/* Left */}
 
@@ -270,7 +276,7 @@ export default function TermsContent() {
                 </span>
               </h1>
 
-              <p className="mt-3 max-w-lg text-lg leading-6 text-slate-600">
+              <p className="mt-2 text-lg leading-8 text-slate-600">
                 Please read these terms and conditions carefully
                 before using the Swarikaro website.
               </p>
@@ -316,9 +322,9 @@ export default function TermsContent() {
               {item.number}
             </div>
 
-            <h3 className="text-xl font-bold text-[#183153]">
+           <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
               {item.title}
-            </h3>
+            </h4>
 
           </div>
 
@@ -344,9 +350,12 @@ export default function TermsContent() {
 
               <span className="mt-[9px] h-2 w-2 rounded-full bg-orange-500"></span>
 
-              <span className="text-[15px] leading-7 text-slate-600">
+             <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                 {point}
-              </span>
+              </p>
 
             </li>
 

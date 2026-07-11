@@ -48,7 +48,7 @@ export function buildLocalBusinessSchema() {
     priceRange: "INR",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Gijhore",
+      streetAddress: "Electronic City, Sector 62",
       addressLocality: "Noida",
       addressRegion: "Uttar Pradesh",
       postalCode: "201301",

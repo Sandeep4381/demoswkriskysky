@@ -96,20 +96,12 @@ const sectionRef = useRef(null);
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 lg:py-28 overflow-hidden"
-      style={{ background: "#fffdfb" }}
+      className="relative py-18 lg:py-16 overflow-hidden"
+      style={{ background: "bg-[#fbf7f0]" }}
     >
-      {/* bg blobs */}
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(249,115,22,.08) 0%, transparent 70%)",
-          filter: "blur(60px)",
-          transform: "translate(-30%, 30%)",
-        }}
-      />
+       <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
-      <div className="relative  hero-wrapper max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="relative  hero-wrapper max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* section label */}
         <div className="text-center mb-14">
@@ -123,17 +115,10 @@ const sectionRef = useRef(null);
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif", color: " text-[#29566A]" }}
           >
             Finding the right vehicle should be{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #f97316 0%, #dc2626 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              simple.
+           <span className="text-orange-500"> simple.
             </span>
           </h2>
-          <p className="text-base max-w-xl mx-auto leading-relaxed" style={{ color: "#7a5c45" }}>
+          <p className="mt-3 text-lg leading-8 text-slate-600">
             Swarikaro helps you discover trusted mobility options around the location that matters to you and plan your journey with confidence.
           </p>
         </div>
@@ -229,57 +214,74 @@ const sectionRef = useRef(null);
           </div>
 
           {/* Right — steps list */}
-          <div className="flex flex-col gap-3">
-            {steps.map((step, i) => (
-              <button
-                key={step.num}
-                onClick={() => setActiveStep(i)}
-                className="text-left w-full rounded-2xl px-5 py-4 transition-all duration-300"
-                style={{
-                  opacity: visible[i] ? 1 : 0,
-                  transform: visible[i] ? "translateX(0)" : "translateX(24px)",
-                  transition: `opacity 0.4s ease ${i * 0.05}s, transform 0.4s ease ${i * 0.05}s, background 0.2s`,
-                  background:
-                    activeStep === i
-                      ? "linear-gradient(135deg, rgba(249,115,22,0.08), rgba(220,38,38,0.05))"
-                      : "rgba(255,255,255,0.7)",
-                  border: `1.5px solid ${activeStep === i ? "rgba(249,115,22,0.3)" : "rgba(249,115,22,0.1)"}`,
-                  boxShadow: activeStep === i ? "0 4px 24px rgba(249,115,22,0.1)" : "none",
-                }}
-              >
-                <div className="flex items-start gap-4">
-                  {/* step number */}
-                  <div
-                    className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center font-black text-sm transition-all"
-                    style={{
-                      fontFamily: "'Bricolage Grotesque', sans-serif",
-                      background: activeStep === i ? "#f97316" : "rgba(249,115,22,0.1)",
-                      color: activeStep === i ? "#fff" : "#ea580c",
-                    }}
-                  >
-                    {step.num}
-                  </div>
-                  <div>
-                    <p
-                      className="font-bold text-sm mb-0.5"
-                      style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
-                        color: activeStep === i ? "#1a1008" : "#3a2510",
-                      }}
-                    >
-                      {step.title}
-                    </p>
-                    <p
-                      className="text-xs leading-relaxed"
-                      style={{ color: activeStep === i ? "#5a4030" : "#9a7a65" }}
-                    >
-                      {step.desc}
-                    </p>
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
+   <div className="flex flex-col gap-3">
+  {steps.map((step, i) => (
+    <button
+      key={step.num}
+      onClick={() => setActiveStep(i)}
+      className="w-full rounded-2xl px-5 py-4 text-left transition-all duration-300"
+      style={{
+        opacity: visible[i] ? 1 : 0,
+        transform: visible[i] ? "translateX(0)" : "translateX(24px)",
+        transition: `opacity 0.4s ease ${i * 0.05}s, transform 0.4s ease ${i * 0.05}s`,
+
+        background:
+          activeStep === i
+            ? "linear-gradient(135deg, rgba(41,86,106,0.10) 0%, rgba(41,86,106,0.03) 55%, rgba(255,255,255,1) 100%)"
+            : "#ffffff",
+
+        border: `1.5px solid ${
+          activeStep === i
+            ? "rgba(41,86,106,0.35)"
+            : "rgba(41,86,106,0.15)"
+        }`,
+
+        boxShadow:
+          activeStep === i
+            ? "0 10px 30px rgba(41,86,106,0.10)"
+            : "0 2px 10px rgba(0,0,0,0.05)",
+      }}
+    >
+      <div className="flex items-start gap-4">
+        {/* Step Number */}
+        <div
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl font-black text-sm transition-all duration-300"
+          style={{
+            fontFamily: "'Bricolage Grotesque', sans-serif",
+            background:
+              activeStep === i
+                ? "#29566A"
+                : "rgba(41,86,106,0.08)",
+            color: activeStep === i ? "#fff" : "#29566A",
+          }}
+        >
+          {step.num}
+        </div>
+
+        <div>
+          <p
+            className="mb-1 font-bold text-sm"
+            style={{
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              color: activeStep === i ? "#29566A" : "#1F2937",
+            }}
+          >
+            {step.title}
+          </p>
+
+          <p
+            className="text-xs leading-relaxed"
+            style={{
+              color: activeStep === i ? "#4F6D7A" : "#6B7280",
+            }}
+          >
+            {step.desc}
+          </p>
+        </div>
+      </div>
+    </button>
+  ))}
+</div>
         </div>
       </div>
     </section>

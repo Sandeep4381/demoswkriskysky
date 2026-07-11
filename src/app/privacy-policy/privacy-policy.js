@@ -172,10 +172,18 @@ const policySections = [
 
 export default function PrivacyPolicy() {
   return (
-    <main className="bg-[#F8F4EE] py-16 sm:py-20 lg:py-24">
+    <main className="py-16 sm:py-20 lg:py-20">
+     <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
-        <section className="overflow-hidden rounded-[20px] border border-orange-100 bg-white">
-          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-14">
+         <section
+        className="
+    
+    relative   hero-wrapper overflow-hidden  
+  "
+      >
+      
+          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
             <div>
               <Image
                 src="/logo.png"
@@ -186,11 +194,11 @@ export default function PrivacyPolicy() {
                 priority
               />
 
-              <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#183153] lg:text-5xl">
+              <h1 className="mt-4 text-4xl font-extrabold leading-tight text-[#183153] lg:text-5xl">
                 Privacy <span className="text-orange-500">Policy</span>
               </h1>
 
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+               <p className="mt-3 text-lg leading-8 text-slate-600">
                 We value your privacy and are committed to protecting your
                 personal information when you visit the Swarikaro website.
               </p>
@@ -219,10 +227,10 @@ export default function PrivacyPolicy() {
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500 text-white">
                 <ShieldCheck size={34} />
               </div>
-              <h2 className="mt-6 text-2xl font-extrabold text-[#183153]">
+              <h2 className="mt-4 text-2xl font-extrabold text-[#183153]">
                 Website Privacy Notice
               </h2>
-              <p className="mt-4 leading-8 text-slate-600">
+              <p className="mt-2 text-lg leading-8 text-slate-600">
                 This Privacy Policy applies only to the Swarikaro Website. The
                 Swarikaro User App and Swarikaro Partner App have their own
                 Privacy Policies governing data collection and processing inside
@@ -233,6 +241,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+         <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
           {policySections.map((section) => {
             const Icon = section.icon;
 
@@ -246,9 +255,9 @@ export default function PrivacyPolicy() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                       {section.number}
                     </div>
-                    <h3 className="text-lg font-bold text-[#183153]">
+                     <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                       {section.title}
-                    </h3>
+                    </h4>
                   </div>
 
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-50">
@@ -260,9 +269,12 @@ export default function PrivacyPolicy() {
                   {section.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <span className="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-orange-500" />
-                      <span className="text-[15px] leading-7 text-slate-600">
+                       <p
+                className="text-xs sm:text-sm leading-relaxed text-slate-600"
+                
+              >
                         {point}
-                      </span>
+                      </p>
                     </li>
                   ))}
                 </ul>

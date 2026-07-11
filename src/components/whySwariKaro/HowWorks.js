@@ -31,22 +31,8 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      {/* Animated background */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: `linear-gradient(135deg, transparent 0%, var(--secondary) 50%, transparent 100%)`,
-        }}
-        animate={{
-          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+    <section className="py-16 sm:py-20 lg:py-20 relative overflow-hidden">
+      <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -56,10 +42,10 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4" style={{ color: 'var(--secondary)' }}>
-            How It <span style={{ color: 'var(--primary)' }}>Works</span>
+          <h2 className=" text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+            How it <span className="text-orange-500">Works.</span>
           </h2>
-          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="mt-3 text-lg leading-8 text-slate-600">
             Start earning with Swarikaro in four simple steps
           </p>
         </motion.div>
@@ -102,11 +88,12 @@ export function HowItWorks() {
                     <step.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </motion.div>
 
-                  <h3 className="text-xl sm:text-2xl mb-3 text-center" style={{ color: 'var(--secondary)' }}>
-                    {step.title}
-                  </h3>
+                  <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2"> {step.title}
+                  </h4>
 
-                  <p className="text-sm sm:text-base text-foreground/70 text-center leading-relaxed">
+                   
+
+                  <p className="text-sm sm:text-base text-slate-600 text-center leading-relaxed">
                     {step.description}
                   </p>
                 </div>

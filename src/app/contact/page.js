@@ -52,11 +52,11 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbSchema} />
       <main
         id="contact"
-        className="relative overflow-hidden bg-[#F8F4EE] py-20"
+        className="relative overflow-hidden  py-20"
       >
         {/* Background Effects */}
-        <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl" />
-        <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-[#29566A]/10 blur-3xl" />
+         <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           {/* Header */}
@@ -68,7 +68,7 @@ export default function ContactPage() {
 
             <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-orange-500" />
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-3 text-lg leading-8 text-slate-600">
               Have questions about Swarikaro, our services, or partnership
               opportunities? We'd love to hear from you. Reach out to our team
               and we'll get back to you as soon as possible.

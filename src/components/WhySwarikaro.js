@@ -71,7 +71,7 @@ export default function WhySwarikaro() {
     <section
       className="
    
-    relative overflow-hidden hero-wrapper bg-[#fbf7f0] !py-16 lg:!py-20
+    relative overflow-hidden hero-wrapper  !py-16 lg:!py-20
   "
     >
 
@@ -190,7 +190,7 @@ export default function WhySwarikaro() {
     w-full
     self-start
     mt-0
-    lg:mt-8
+    lg:mt-2
 
     flex
     flex-col
@@ -202,15 +202,12 @@ export default function WhySwarikaro() {
     lg:text-left
   "
           >
-
-            <div className="flex  gap-4 text-base font-extrabold text-orange-500">
-
-
-
-              Why Swarikaro ?
-
-
-            </div>
+ <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
+            <span className="h-px w-16  bg-orange-300" />
+         Why Swarikaro ?
+            <span className="h-px w-16 bg-orange-300" />
+          </div>
+          
 
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight text-[#29566A]">
               Built Around Your Location,
@@ -315,42 +312,42 @@ export default function WhySwarikaro() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 
             <div className="text-center">
-              <h4 className="text-4xl font-black text-orange-500">
-                100%
+              <h4 className="text-2xl font-black text--foreground">
+                Location-First
               </h4>
 
-              <p className="mt-3 text-sm font-medium text-slate-600">
-                Location Based Search
+              <p className="mt-2 text-sm font-medium text-slate-600">
+                Vehicle Discovery
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-4xl font-black text-orange-500">
-                25+
+              <h4 className="text-2xl font-black text --foreground">
+                Flexible
               </h4>
 
-              <p className="mt-3 text-sm font-medium text-slate-600">
-                Radius Search Options
+              <p className="mt-2 text-sm font-medium text-slate-600">
+                Search Radius
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-4xl font-black text-orange-500">
-                24/7
+              <h4 className="text-2xl font-black text--foreground">
+                Advance
               </h4>
 
-              <p className="mt-3 text-sm font-medium text-slate-600">
-                Anytime Reservation
+              <p className="mt-2 text-sm font-medium text-slate-600">
+                Journey Planning
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-4xl font-black text-orange-500">
-                ∞
+              <h4 className="text-2xl font-black text--foreground">
+                Trusted
               </h4>
 
-              <p className="mt-3 text-sm font-medium text-slate-600">
-                Travel Possibilities
+              <p className="mt-2 text-sm font-medium text-slate-600">
+                Mobility Partners
               </p>
             </div>
 

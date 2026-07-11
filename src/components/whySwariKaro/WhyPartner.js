@@ -37,9 +37,10 @@ const benefits = [
 
 export function WhyPartner() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-20 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background" />
+       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -49,8 +50,8 @@ export function WhyPartner() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4" style={{ color: 'var(--secondary)' }}>
-            Why Partner with <span style={{ color: 'var(--primary)' }}>Swarikaro?</span>
+          <h2 className=" text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+            Why Partner With <span className="text-orange-500">Swarikar ?</span>
           </h2>
         </motion.div>
 
@@ -76,45 +77,20 @@ export function WhyPartner() {
                 <benefit.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </motion.div>
 
-              <h3 className="text-lg sm:text-xl mb-3" style={{ color: 'var(--secondary)' }}>
-                {benefit.title}
-              </h3>
+               <h4
+                className="font-bold text-sm sm:text-base text-slate-600 mb-2">{benefit.title}</h4>
+                
+                
+          
 
-              <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {benefit.description}
               </p>
             </motion.div>
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mt-12 sm:mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-xl text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
-            style={{ background: 'var(--primary)' }}
-          >
-            <Shield className="w-5 h-5" />
-            <span>Become a Partner</span>
-          </motion.button>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-xl border-2 hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2"
-            style={{ borderColor: 'var(--primary)', color: 'var(--primary)' }}
-          >
-            <Smartphone className="w-5 h-5" />
-            <span>Download Partner App</span>
-          </motion.button>
-        </motion.div>
+     
 
         {/* Trust badges */}
         <motion.div
@@ -122,7 +98,7 @@ export function WhyPartner() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-12 sm:mt-16 text-sm text-foreground/60"
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-12 sm:mt-16 text-sm text-slate-600"
         >
           {["Simple onboarding", "Dedicated support", "Timely payments"].map((badge, i) => (
             <motion.div

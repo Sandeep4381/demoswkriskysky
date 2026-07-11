@@ -51,15 +51,15 @@ export default function ContactForm() {
 
   return (
     <section className="mx-auto w-full max-w-2xl rounded-3xl border border-orange-100 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
-      <h2 className="text-2xl font-bold text-[#29566A]">Send Us a Message</h2>
-      <p className="mt-2 text-slate-600">
+      <h2 className="text-2xl font-bold  text-slate-600">Send Us a Message</h2>
+       <p className="mt-3 text-lg leading-8 text-slate-600">
         Fill out the form below and our team will get in touch with you.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-5">
         <div className="grid gap-5 md:grid-cols-2">
           <label className="block">
-            <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#29566A]">
+            <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
               <User className="h-4 w-4 text-orange-500" />
               Name
             </span>
@@ -70,12 +70,12 @@ export default function ContactForm() {
               value={form.name}
               onChange={updateField}
               placeholder="Your Name"
-              className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-[#29566A] outline-none transition-all focus:border-orange-500"
+              className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-slate-600 outline-none transition-all focus:border-orange-500"
             />
           </label>
 
           <label className="block">
-            <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#29566A]">
+            <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
               <Phone className="h-4 w-4 text-orange-500" />
               Mobile
             </span>
@@ -86,13 +86,13 @@ export default function ContactForm() {
               value={form.mobile}
               onChange={updateField}
               placeholder="Your Mobile Number"
-              className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-[#29566A] outline-none transition-all focus:border-orange-500"
+              className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-slate-600 outline-none transition-all focus:border-orange-500"
             />
           </label>
         </div>
 
         <label className="block">
-          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#29566A]">
+          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
             <Mail className="h-4 w-4 text-orange-500" />
             Email
           </span>
@@ -103,12 +103,12 @@ export default function ContactForm() {
             value={form.email}
             onChange={updateField}
             placeholder="Your Email Address"
-            className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-[#29566A] outline-none transition-all focus:border-orange-500"
+            className="h-14 w-full rounded-xl border border-[#EADFCE] bg-white px-4 text-slate-600 outline-none transition-all focus:border-orange-500"
           />
         </label>
 
         <label className="block">
-          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#29566A]">
+          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
             <MessageSquare className="h-4 w-4 text-orange-500" />
             Message
           </span>
@@ -119,14 +119,14 @@ export default function ContactForm() {
             value={form.message}
             onChange={updateField}
             placeholder="How can we help you?"
-            className="w-full rounded-xl border border-[#EADFCE] bg-white p-4 text-[#29566A] outline-none transition-all focus:border-orange-500"
+            className="w-full rounded-xl border border-[#EADFCE] bg-white p-4 text-slate-600 outline-none transition-all focus:border-orange-500"
           />
         </label>
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="flex h-14 w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+          className="flex h-14 w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-orange-500 to-orange-500 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "loading"
             ? <>

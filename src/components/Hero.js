@@ -73,10 +73,12 @@ export default function App() {
       {/* ── Hero ── */}
       <section
         className="
-    hero-bg
-    relative   hero-wrapper overflow-hidden bg-[#fbf7f0] !py-16 lg:!py-20
+    
+    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
   "
       >
+       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
         <div
           className="
     hero-wrapper
@@ -84,8 +86,9 @@ export default function App() {
     mx-auto
     px-[5vw]
     grid
-    lg:grid-cols-2
-    gap-10
+    lg:grid-cols-[3fr_2fr]
+   
+    gap-8
     lg:gap-8
     items-start
     lg:items-center
@@ -115,12 +118,12 @@ export default function App() {
             <h1
               className="
     font-bold
-    leading-[1.05]
-    tracking-[-0.04em]
+    leading-[1.09]
+  
     text-[#29566A]
     mt-16
     
-    text-[clamp(2rem,4vw,5.8rem)]
+     text-[clamp(2rem,4vw,5.2rem)]
   "
             >
               Find the Right Vehicle,
@@ -137,7 +140,7 @@ export default function App() {
               </span>
             </h1>
 
-            <p className="text-base leading-relaxed mb-8 max-w-md" style={{ color: "#7a5c45" }}>
+            <p className="text-base  mt-2 leading-relaxed mb-8 max-w-md" style={{ color: "#7a5c45" }}>
               Search around your preferred location, plan ahead and discover trusted mobility solutions for every journey.
             </p>
 
@@ -150,13 +153,13 @@ export default function App() {
                 <Download className="w-4 h-4" />
                 Download App
               </button>
-                <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
-                  <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
-  <Users className="w-4 h-4" />
-  Become a Partner
-</button>
-                </Link>
-             
+              <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
+                <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
+                  <Users className="w-4 h-4" />
+                  Become a Partner
+                </button>
+              </Link>
+
             </div>
 
             {/* Feature chips */}
@@ -174,8 +177,8 @@ export default function App() {
                         : "rgba(249,115,22,0.08)",
                     color: activeFeature === i ? "#ea580c" : "#ea580c",
                     border: `1.5px solid ${activeFeature === i
-                        ? "rgba(249,115,22,0.2)"
-                        : "rgba(249,115,22,0.2)"
+                      ? "rgba(249,115,22,0.2)"
+                      : "rgba(249,115,22,0.2)"
                       }`,
                   }}
                 >

@@ -141,21 +141,19 @@ export default function FAQContent() {
   });
 
   return (
-    <section className="bg-[#F8F4EE] py-16">
+    <section
+        className="
+    
+    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
+  "
+      >
+     <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
 
         {/* Heading */}
-
         <div className="text-center">
-         <div className="flex items-center justify-center gap-4 mb-5">
-  <div className="h-[2px] w-14 bg-[#FF7A00] rounded-full"></div>
-
-  <span className="text-[#FF7A00] text-sm font-bold uppercase tracking-wider">
-    FAQ
-  </span>
-
-  <div className="h-[2px] w-14 bg-[#FF7A00] rounded-full"></div>
-</div>
+         
 
           <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
             Frequently Asked{" "}
@@ -164,7 +162,7 @@ export default function FAQContent() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-7 text-slate-600">
+         <p className="mt-3 text-lg leading-8 text-slate-600">
             Find answers to the most common questions about
             Swarikaro. Can't find what you're looking for?
             Contact our support team.
@@ -174,7 +172,7 @@ export default function FAQContent() {
         {/* Hero Card */}
 
       
-<div className="mt-4 overflow-hidden rounded-[20px] border border-orange-100 bg-gradient-to-r from-[#FFF8F1] via-[#FFFDFB] to-[#FFF8F1] px-2 py-2 shadow-sm lg:px-10">
+<div className="mt-6 overflow-hidden rounded-[20px] border border-orange-100 bg-gradient-to-r from-[#FFF8F1] via-[#FFFDFB] to-[#FFF8F1] px-2 py-2 shadow-sm lg:px-10">
   <div className="grid items-center  lg:grid-cols-[200px_1fr]">
 
 <div className="flex justify-center lg:justify-end lg:translate-x-16">
@@ -190,18 +188,18 @@ export default function FAQContent() {
 
     {/* Right */}
     <div className="max-w-[560px] lg:ml-48">
-      <h3 className="text-[30px] font-bold text-[#29566A] lg:text-[30px]">
+       <h2 className="text-2xl font-bold  text-slate-600">
         Have a question?
-      </h3>
+      </h2>
 
-      <h4 className="mt-1 text-[22px] font-bold text-orange-500 lg:text-[26px]">
+      <h4 className="mt-1 text-2xl font-bold  text-orange-500 ">
         We're here to help!
       </h4>
 
       <div className="relative mt-5">
         <Search
           size={18}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-slate-600"
         />
 
         <input
@@ -245,9 +243,9 @@ export default function FAQContent() {
 
             <div className="rounded-3xl border border-orange-100 bg-white p-5 shadow-sm">
 
-              <h3 className="mb-2 text-lg font-bold text-[#29566A]">
+              <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
                 Browse by Topic
-              </h3>
+              </h4>
 
             <div className="space-y-2">
   {categories.map((item) => {
@@ -273,7 +271,7 @@ export default function FAQContent() {
           className={`text-sm font-medium ${
             selectedCategory === item.name
               ? "text-orange-500"
-              : "text-[#29566A]"
+              : "text-slate-600 "
           }`}
         >
           {item.name}
@@ -373,8 +371,8 @@ export default function FAQContent() {
 </div>
 
 <h3
-  className={`text-base font-semibold transition-colors duration-300 ${
-    open ? "text-orange-500" : "text-[#29566A]"
+  className={`ont-bold text-sm sm:text-base  mb-2 transition-colors duration-300 ${
+    open ? "text-orange-500" : "text-slate-600"
   }`}
 >
   {faq.question}
@@ -385,18 +383,18 @@ export default function FAQContent() {
                     {open ? (
                       <ChevronUp className="text-orange-500" />
                     ) : (
-                      <ChevronDown className="text-slate-500" />
+                      <ChevronDown className="mt-3 text-lg leading-8 text-slate-600" />
                     )}
 
                   </button>
 
                   {open && (
                 <div className="border-t border-orange-100 bg-white px-5 py-5">
-  <div className="rounded-xl bg-orange-50/40 px-6 py-5">
-    <p className="text-sm leading-7 text-slate-600">
+ 
+     <p className="  leading-8 text-slate-600">
       {faq.answer}
     </p>
-  </div>
+  
 </div>
                   )}
 

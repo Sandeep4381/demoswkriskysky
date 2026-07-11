@@ -69,7 +69,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-20">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-background to-[#fff7ed]" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,43 +149,7 @@ export function Benefits() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mx-auto mt-16 max-w-5xl overflow-hidden rounded-2xl bg-secondary shadow-xl"
-        >
-          <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="p-6 sm:p-8 lg:p-10">
-              <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
-                Ready to Grow with Swarikaro?
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-white/78 sm:text-lg">
-                Thousands of vehicle owners and rental businesses are building
-                their future with Swarikaro.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-white/78 sm:text-lg">
-                Whether you're just starting or already managing a successful
-                rental business, we're here to help you reach more customers and
-                earn more.
-              </p>
-              <p className="mt-5 font-semibold text-white">
-                Download the Swarikaro Partner App and become a trusted mobility
-                partner today.
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center bg-primary p-6 sm:p-8 lg:p-10">
-              <a
-                href="#partner-interest"
-                className="inline-flex w-full max-w-xs items-center justify-center rounded-lg bg-white px-6 py-4 text-center font-bold text-primary shadow-premium transition hover:-translate-y-0.5"
-              >
-                Start Earning Today
-              </a>
-            </div>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );

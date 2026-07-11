@@ -77,7 +77,7 @@ function FeatureChip({ icon: Icon, text }) {
         <Icon className="h-4 w-4" strokeWidth={2} />
       </span>
 
-      <span className="text-[12px] leading-snug text-[#29566A]">
+      <span className="text-[12px] leading-snug text-slate-600">
         {text}
       </span>
     </div>
@@ -86,30 +86,30 @@ function FeatureChip({ icon: Icon, text }) {
 
 export default function CoreServices() {
   return (
-    <section className="relative hero-wrapper overflow-hidden bg-hero py-20 lg:py-28">
+    <section className="relative hero-wrapper overflow-hidden py-20 lg:py-20">
       {/* decorative blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center">
+        <div className="text-center mt-10 lg:mt-14">
            <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
-            <span className="h-px w-16 bg-orange-300" />
-            How Swarikaro Works
+            <span className="h-px w-16  bg-orange-300" />
+           Our Core Services
             <span className="h-px w-16 bg-orange-300" />
           </div>
           <h2 className="mt-5 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            Travel Your Way. <span className="text-gradient-brand">We're With You.</span>
+            Travel Your Way. <span className="text-orange-500">We're With You.</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+          <p className="mt-3 text-lg leading-8 text-slate-600">
             From self-drive rentals to chauffeur-led reservations — premium mobility built
             around your plans, your pace and your people.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_1.15fr_0.9fr]">
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_1.15fr]">
           {/* Rental */}
           <article className="group relative isolate overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <div className="relative h-44 lg:h-48 overflow-hidden">
@@ -119,7 +119,7 @@ export default function CoreServices() {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/1 to-transparent" />
               <span className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-lg">
                 <CalendarDays className="h-3 w-3" /> Self-Drive
               </span>
@@ -134,7 +134,7 @@ export default function CoreServices() {
               <p className="mt-1.5 text-sm font-semibold text-foreground">
                 Plan today for the journeys of tomorrow.
               </p>
-              <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
+              <p className="mt-2 text-[13.5px] leading-relaxed text-slate-600">
                 Book rental vehicles in advance and search around your destination or stay
                 location.
               </p>
@@ -153,7 +153,7 @@ export default function CoreServices() {
           </article>
 
           {/* Reservation */}
-          <article className="group relative isolate overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
+          {/* <article className="group relative isolate overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <div className="relative h-44 lg:h-48 overflow-hidden">
               <img
   src="/core/reservation.jpg"
@@ -161,7 +161,7 @@ export default function CoreServices() {
   loading="lazy"
  className="h-full w-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-110"
 />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/1 to-transparent" />
               <span className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-lg">
                 <UserRoundCheck className="h-3 w-3" /> With Driver
               </span>
@@ -193,7 +193,7 @@ export default function CoreServices() {
                 ))}
               </div>
             </div>
-          </article>
+          </article> */}
 
           {/* More Services */}
           <article className="group relative isolate overflow-hidden rounded-3xl shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
@@ -237,8 +237,8 @@ export default function CoreServices() {
                   <Icon className="h-6 w-6" strokeWidth={2.2} />
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-foreground">{item.title}</p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                  <p className="text-sm font-bold text-slate-600">{item.title}</p>
+                  <p className="mt-0.5 text-xs leading-relaxed text-slate-600">
                     {item.copy}
                   </p>
                 </div>

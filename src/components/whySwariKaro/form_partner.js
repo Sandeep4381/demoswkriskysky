@@ -25,17 +25,15 @@ const vehicleTypes = [
   "Bike",
   "Scooter",
   "Car",
-  "SUV",
   "Tempo Traveller",
-  "Taxi / Cab",
-  "Fleet / Multiple Types",
+  "Multiple Types",
 ];
 
 const benefits = [
   "Early access",
   "Priority visibility",
   "Launch support",
-  "Reduced commission for first partners",
+  "Reduced commission for early partners",
 ];
 
 export function PartnerInterestForm() {
@@ -82,7 +80,7 @@ export function PartnerInterestForm() {
       id="partner-interest"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#fff7ed] via-background to-[#eef7f9]" />
+    <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -93,22 +91,19 @@ export function PartnerInterestForm() {
             transition={{ duration: 0.5 }}
             className="max-w-2xl"
           >
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-soft">
-              <Building2 className="h-4 w-4" />
-              Partner Landing Page
-            </p>
+            
 
             <h2 className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl">
               Grow Your Vehicle Business With{" "}
               <span className="text-primary">Swarikaro</span>
             </h2>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/75 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
               Connect with travelers planning their journeys in advance.
             </p>
 
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-secondary">
+              <h3 className="text-xl font-bold text-slate-600 ">
                 Become an Early Partner
               </h3>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -117,8 +112,8 @@ export function PartnerInterestForm() {
                     key={benefit}
                     className="flex items-center gap-3 rounded-lg border border-border bg-white px-4 py-3 shadow-soft"
                   >
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm font-semibold text-secondary">
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-slate-600" />
+                    <span className="text-sm  text-slate-600">
                       {benefit}
                     </span>
                   </div>
@@ -136,10 +131,10 @@ export function PartnerInterestForm() {
             className="rounded-2xl border border-border bg-white p-5 shadow-xl sm:p-7 lg:p-8"
           >
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-secondary">
+              <h3 className="text-2xl font-bold text-slate-600">
                 Partner Interest Form
               </h3>
-              <p className="mt-2 text-sm text-foreground/70">
+              <p className="mt-2 text-sm text-slate-600">
                 Share your details and Swarikaro will reach out for onboarding.
               </p>
             </div>
@@ -157,12 +152,12 @@ export function PartnerInterestForm() {
                   value={form.name}
                   onChange={updateField}
                   placeholder="Your full name"
-                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
                 />
               </label>
 
               <label className="block">
-                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
                   <Phone className="h-4 w-4 text-primary" />
                   Mobile
                 </span>
@@ -174,12 +169,12 @@ export function PartnerInterestForm() {
                   onChange={updateField}
                   placeholder="10-digit number"
                   pattern="[0-9+\-\s]{10,15}"
-                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
                 />
               </label>
 
               <label className="block">
-                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
                   <MapPin className="h-4 w-4 text-primary" />
                   City
                 </span>
@@ -190,12 +185,12 @@ export function PartnerInterestForm() {
                   value={form.city}
                   onChange={updateField}
                   placeholder="Your city"
-                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
                 />
               </label>
 
               <label className="block">
-                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
+                <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
                   <Building2 className="h-4 w-4 text-primary" />
                   Vehicle Type
                 </span>
@@ -204,7 +199,7 @@ export function PartnerInterestForm() {
                   name="vehicleType"
                   value={form.vehicleType}
                   onChange={updateField}
-                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+                  className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
                 >
                   <option value="">Select type</option>
                   {vehicleTypes.map((type) => (

@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "Swarikaro",
     images: [
       {
-        url: "/og-partner.jpg", // Place this image in /public
+        url: "/og-image.png", // Place this image in /public
         width: 1200,
         height: 630,
         alt: "Become a Partner - Swarikaro",
@@ -46,7 +46,7 @@ export const metadata = {
     title: "Become a Partner | Swarikaro",
     description:
       "List your vehicle on Swarikaro and start earning with trusted rentals.",
-    images: ["/og-partner.jpg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://swarikaro.com/partner",
