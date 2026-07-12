@@ -51,7 +51,7 @@ export function WhyPartner() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className=" text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            Why Partner With <span className="text-orange-500">Swarikar ?</span>
+            Why Partner With <span className="text-orange-500">Swarikaro ?</span>
           </h2>
         </motion.div>
 

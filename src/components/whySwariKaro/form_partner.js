@@ -11,6 +11,13 @@ import {
   User,
   X,
 } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import SuccessModal from "../ui/SuccessModal";
@@ -307,24 +314,32 @@ function PartnerFormCard({
             <MapPin className="h-4 w-4 text-primary" />
             State
           </span>
-          <select
-            required
-            name="state"
-            value={form.state}
-            onChange={updateField}
-            className="w-full h-10 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
-          >
-              {form.state === "" ? (
-              <option value="" disabled>
-                {locationLoaded ? fallbackState : "Detecting your state..."}
-              </option>
-            ) : null}
-            {indianStates.map((state) => (
-              <option key={state} value={state}>
-                {state}
-              </option>
-            ))}
-          </select>
+         <Select
+  onValueChange={(value) =>
+  updateField({
+    target: {
+      name: "state",
+      value,
+    },
+  })
+}
+>
+  <SelectTrigger className="h-12 w-full rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10">
+    <SelectValue
+      placeholder={
+        locationLoaded ? "Select state" : "Detecting your state..."
+      }
+    />
+  </SelectTrigger>
+
+  <SelectContent className="max-h-48 overflow-y-auto">
+    {indianStates.map((state) => (
+      <SelectItem key={state} value={state}>
+        {state}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
         </label>
 
         <label className="block">
@@ -337,7 +352,7 @@ function PartnerFormCard({
             name="vehicleType"
             value={form.vehicleType}
             onChange={updateField}
-            className="w-full h-10 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-12 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           >
             <option value="">Select type</option>
             {vehicleTypes.map((type) => (
