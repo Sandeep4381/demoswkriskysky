@@ -12,21 +12,64 @@ import {
   X,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import SuccessModal from "../ui/SuccessModal";
+
+const fallbackState = "Select state";
 
 const initialForm = {
   name: "",
   mobile: "",
   city: "",
+  state: "",
   vehicleType: "",
   vehicleCount: "",
 };
+
+const indianStates = [
+  "Andaman and Nicobar Islands",
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chandigarh",
+  "Chhattisgarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
+  "Delhi",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jammu and Kashmir",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Ladakh",
+  "Lakshadweep",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Puducherry",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
+];
 
 const vehicleTypes = [
   "Bike",
   "Scooter",
   "Car",
-  "Tempo Traveller",
+  "Mini Bus",
   "Multiple Types",
 ];
 
@@ -42,12 +85,16 @@ export function PartnerInterestForm() {
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
   const [showPopup, setShowPopup] = useState(true);
+  const [showSuccess, setShowSuccess] = useState(false);
+  // Auto-detect removed: default to unloaded but ready state
+  const [locationLoaded, setLocationLoaded] = useState(true);
 
   const updateField = (event) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
   };
 
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus("loading");
@@ -70,6 +117,7 @@ export function PartnerInterestForm() {
       setStatus("success");
       setMessage("Thank you. Our team will contact you shortly.");
       setShowPopup(false);
+      setShowSuccess(true);
     } catch (error) {
       setStatus("error");
       setMessage(
@@ -103,6 +151,9 @@ export function PartnerInterestForm() {
               message={message}
               updateField={updateField}
               handleSubmit={handleSubmit}
+              locationLoaded={locationLoaded}
+              showSuccess={showSuccess}
+              setShowSuccess={setShowSuccess}
               className="border-0 shadow-none"
             />
           </motion.div>
@@ -157,6 +208,9 @@ export function PartnerInterestForm() {
               message={message}
               updateField={updateField}
               handleSubmit={handleSubmit}
+              locationLoaded={locationLoaded}
+              showSuccess={showSuccess}
+              setShowSuccess={setShowSuccess}
               motionProps={{
                 initial: { opacity: 0, y: 24 },
                 whileInView: { opacity: 1, y: 0 },
@@ -177,6 +231,9 @@ function PartnerFormCard({
   message,
   updateField,
   handleSubmit,
+  locationLoaded,
+  showSuccess,
+  setShowSuccess,
   className = "",
   motionProps = {},
 }) {
@@ -196,7 +253,7 @@ function PartnerFormCard({
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block sm:col-span-2">
+        <label className="block">
           <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-secondary">
             <User className="h-4 w-4 text-primary" />
             Name
@@ -208,7 +265,7 @@ function PartnerFormCard({
             value={form.name}
             onChange={updateField}
             placeholder="Your full name"
-            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-12 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           />
         </label>
 
@@ -225,7 +282,7 @@ function PartnerFormCard({
             onChange={updateField}
             placeholder="10-digit number"
             pattern="[0-9+\-\s]{10,15}"
-            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-12 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           />
         </label>
 
@@ -241,8 +298,33 @@ function PartnerFormCard({
             value={form.city}
             onChange={updateField}
             placeholder="Your city"
-            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-12 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           />
+        </label>
+
+        <label className="block">
+          <span className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-600">
+            <MapPin className="h-4 w-4 text-primary" />
+            State
+          </span>
+          <select
+            required
+            name="state"
+            value={form.state}
+            onChange={updateField}
+            className="w-full h-10 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+          >
+              {form.state === "" ? (
+              <option value="" disabled>
+                {locationLoaded ? fallbackState : "Detecting your state..."}
+              </option>
+            ) : null}
+            {indianStates.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
         </label>
 
         <label className="block">
@@ -255,7 +337,7 @@ function PartnerFormCard({
             name="vehicleType"
             value={form.vehicleType}
             onChange={updateField}
-            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-10 rounded-lg border border-border bg-white px-4 text-slate-600 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           >
             <option value="">Select type</option>
             {vehicleTypes.map((type) => (
@@ -279,7 +361,7 @@ function PartnerFormCard({
             value={form.vehicleCount}
             onChange={updateField}
             placeholder="Example: 3"
-            className="w-full rounded-lg border border-border bg-white px-4 py-3 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
+            className="w-full h-12 rounded-lg border border-border bg-white px-4 text-secondary outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
           />
         </label>
       </div>
@@ -311,6 +393,7 @@ function PartnerFormCard({
           {message}
         </p>
       )}
+      <SuccessModal open={showSuccess} message={message || "Thank you."} onClose={() => setShowSuccess(false)} />
     </motion.form>
   );
 }

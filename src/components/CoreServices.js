@@ -89,26 +89,25 @@ function FeatureChip({ icon: Icon, text }) {
 
 export default function CoreServices() {
   return (
-    <section className="relative hero-wrapper overflow-hidden py-20 lg:py-18">
+  <section className="relative overflow-hidden pt-20 pb-10 lg:pt-18 lg:pb-8">
       {/* decorative blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative  hero-wrapper mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mt-10 lg:mt-14">
+        <div className="text-center ">
            <div className="flex items-center justify-center gap-4 text-base font-extrabold text-orange-500">
             <span className="h-px w-16  bg-orange-300" />
            Our Core Services
             <span className="h-px w-16 bg-orange-300" />
           </div>
-          <h2 className="mt-5 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl mb-4">
             Travel Your Way. <span className="text-orange-500">We're With You.</span>
           </h2>
-            <p
-                className="text-xs sm:text-sm leading-relaxed text-slate-600"
-                
-              >
+             <p
+            className="text-lg leading-8 text-slate-600 sm:text-lg  mx-auto"   
+>
             From self-drive rentals to chauffeur-led reservations — premium mobility built
             around your plans, your pace and your people.
           </p>
@@ -229,7 +228,7 @@ export default function CoreServices() {
         </div>
 
         {/* Trust bar */}
-        <div className="mt-10 grid gap-6 rounded-3xl border border-border/70 bg-white/80 px-6 py-7 shadow-card backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 rounded-3xl border border-border/70 bg-white/80 px-6 py-7 shadow-card backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4 ">
           {trustItems.map((item, i) => {
             const Icon = item.icon;
             return (

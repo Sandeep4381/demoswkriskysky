@@ -96,7 +96,7 @@ const sectionRef = useRef(null);
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 lg:py-16 overflow-hidden"
+      className="relative py-16 lg:py-14 overflow-hidden"
       style={{ background: "bg-[#fbf7f0]" }}
     >
        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
@@ -111,7 +111,7 @@ const sectionRef = useRef(null);
             <span className="h-px w-16 bg-orange-300" />
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-black mb-4 leading-tight"
+            className="text-4xl mt-3 lg:text-5xl font-black mb-4 leading-tight"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif", color: " text-[#29566A]" }}
           >
             Finding the right vehicle should be{" "}

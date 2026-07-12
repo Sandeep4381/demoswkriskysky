@@ -5,6 +5,7 @@ const REQUIRED_FIELDS = [
   "name",
   "mobile",
   "city",
+  "state",
   "vehicleType",
   "vehicleCount",
 ];
@@ -25,6 +26,7 @@ export async function POST(request) {
       name: clean(body.name),
       mobile: clean(body.mobile),
       city: clean(body.city),
+      state: clean(body.state),
       vehicleType: clean(body.vehicleType),
       vehicleCount: clean(body.vehicleCount),
     };
@@ -67,17 +69,21 @@ export async function POST(request) {
       Object.entries(data).map(([key, value]) => [key, escapeHtml(value)]),
     );
 
+
+
+
     await transporter.sendMail({
       from: `"Swarikaro Partner Form" <${user}>`,
       to: "karoswari@gmail.com",
       replyTo: user,
-      subject: `New Swarikaro partner interest - ${data.city}`,
+      subject: `New Swarikaro partner interest - ${data.city}, ${data.state}`,
       text: [
         "New partner interest submitted on Swarikaro.",
         "",
         `Name: ${data.name}`,
         `Mobile: ${data.mobile}`,
         `City: ${data.city}`,
+        `State: ${data.state}`,
         `Vehicle Type: ${data.vehicleType}`,
         `Number of Vehicles: ${data.vehicleCount}`,
         `Submitted At: ${submittedAt}`,
@@ -89,6 +95,7 @@ export async function POST(request) {
             <tr><td><strong>Name</strong></td><td>${emailData.name}</td></tr>
             <tr><td><strong>Mobile</strong></td><td>${emailData.mobile}</td></tr>
             <tr><td><strong>City</strong></td><td>${emailData.city}</td></tr>
+            <tr><td><strong>State</strong></td><td>${emailData.state}</td></tr>
             <tr><td><strong>Vehicle Type</strong></td><td>${emailData.vehicleType}</td></tr>
             <tr><td><strong>Number of Vehicles</strong></td><td>${emailData.vehicleCount}</td></tr>
             <tr><td><strong>Submitted At</strong></td><td>${submittedAt}</td></tr>
@@ -97,6 +104,16 @@ export async function POST(request) {
       `,
     });
 
+    await fetch(process.env.GOOGLE_SHEET_WEBHOOK, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    ...data,
+    submittedAt,
+  }),
+});
     return NextResponse.json({ message: "Partner interest submitted." });
   } catch (error) {
     console.error("Partner interest mail error:", error);

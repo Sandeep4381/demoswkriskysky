@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, ChevronRight, Menu, X, ArrowRight, Navigation, Clock, Users, Car, Download } from "lucide-react";
+import ComingSoonButton from "./ui/comingsoon";
 
 /* ─── City images that cycle inside the phone ─── */
 const phoneImages = [
@@ -71,12 +72,17 @@ export default function App() {
 
 
       {/* ── Hero ── */}
-      <section
-        className="
-    
-    relative   hero-wrapper overflow-hidden  !py-16 lg:!py-20
+    <section
+  className="
+    relative
+    hero-wrapper
+    overflow-hidden
+    !pt-16
+    !pb-6
+    lg:!pt-20
+    lg:!pb-8
   "
-      >
+>
        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
         <div
@@ -146,13 +152,14 @@ export default function App() {
 
             {/* CTAs */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 w-full">
-              <button
+              <ComingSoonButton
+                ariaLabel="Download app"
                 className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:scale-105 active:scale-95"
                 style={{ background: "#f97316", color: "#fff", boxShadow: "0 6px 28px rgba(238, 164, 110, 0.4)" }}
               >
                 <Download className="w-4 h-4" />
                 Download App
-              </button>
+              </ComingSoonButton>
               <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
                 <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
                   <Users className="w-4 h-4" />

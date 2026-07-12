@@ -22,6 +22,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import ComingSoonButton from "./comingsoon";
 
 const exploreLinks = [
   { label: "About Swarikaro", href: "/about", icon: UsersRound },
@@ -35,7 +36,7 @@ const exploreLinks = [
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/share/1ErS5CHBLw/",
+    href: "https://www.facebook.com/swarikaro?rdid=WIECxs7eK2tgUxg5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Ddw5v6teS%2F#",
     icon: FaFacebookF,
     className: "bg-[#1877f2]",
   },
@@ -101,7 +102,7 @@ function AppCard({ title, tone = "user" }) {
   return (
     <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.045] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] lg:block lg:p-6">
       <div className="min-w-[82px]">
-        <p className="text-sm font-semibold text-white/58">Swarikaro</p>
+        
         <h4 className="text-lg font-bold leading-tight text-white sm:text-xl lg:text-2xl">
           <span className={tone === "partner" ? "text-orange-400" : ""}>
             {title}
@@ -110,9 +111,9 @@ function AppCard({ title, tone = "user" }) {
       </div>
 
       <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3 lg:mt-6 lg:justify-start">
-        <Link
-          href="#"
-          aria-label={`${title} on Google Play`}
+        <ComingSoonButton
+          ariaLabel={`${title} on Google Play`}
+          variant={tone}
           className="min-w-0"
         >
           <Image
@@ -122,9 +123,13 @@ function AppCard({ title, tone = "user" }) {
             height={45}
             className="h-auto w-[clamp(82px,28vw,104px)] object-contain transition-transform duration-300 hover:scale-105 sm:w-[140px] md:w-[132px] lg:w-[128px] xl:w-[150px]"
           />
-        </Link>
+        </ComingSoonButton>
 
-        <Link href="#" aria-label={`${title} on App Store`} className="min-w-0">
+        <ComingSoonButton
+          ariaLabel={`${title} on App Store`}
+          variant={tone}
+          className="min-w-0"
+        >
           <Image
             src="/footer/app-store-badge.svg"
             alt="App Store"
@@ -132,7 +137,7 @@ function AppCard({ title, tone = "user" }) {
             height={45}
             className="h-auto w-[clamp(82px,28vw,104px)] object-contain transition-transform duration-300 hover:scale-105 sm:w-[140px] md:w-[132px] lg:w-[128px] xl:w-[150px]"
           />
-        </Link>
+        </ComingSoonButton>
       </div>
     </div>
   );
@@ -186,24 +191,25 @@ export default function Footer() {
 
               <div className="mt-7 space-y-4 border-t border-white/[0.08] pt-6 text-white/76 lg:mt-10 lg:space-y-6">
                 <a
-                  href="mailto:swarikaro@gmail.com"
+                  href="mailto:karoswari@gmail.com"
                   className="flex items-center gap-3 font-semibold transition hover:text-orange-300"
                 >
                   <Mail className="h-5 w-5 shrink-0 text-orange-500" />
-                  <span className="break-all">swarikaro@gmail.com</span>
+                  <span className="break-all">karoswari@gmail.com</span>
                 </a>
 
                 <a
-                  href="tel:+916299435686"
+                  href="tel:+91 9082069773"
                   className="flex items-center gap-3 font-semibold transition hover:text-orange-300"
                 >
                   <Phone className="h-5 w-5 shrink-0 text-orange-500" />
-                  +91 6299435686
+                 +91 9082069773
                 </a>
 
                 <p className="flex items-center gap-3 font-semibold">
                   <MapPin className="h-5 w-5 shrink-0 text-orange-500" />
-                  Patna, Bihar, India - 800001
+                  Dombivli East,
+Maharashtra, 421201
                 </p>
               </div>
             </div>
@@ -314,7 +320,7 @@ export default function Footer() {
 
         <div className="mt-4 border-t border-white/[0.08] pt-6">
           <p className="text-left text-sm font-semibold text-white/58 md:text-center">
-            &copy; 2026 Swarikaro - Apna Safar Apne Log. All rights reserved.
+           &copy; 2026 Mystrymind Innovations Private Limited. All rights reserved.
           </p>
         </div>
       </div>

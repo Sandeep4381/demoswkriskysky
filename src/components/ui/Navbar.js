@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import ComingSoonButton from "./comingsoon";
 
 const navLinks = [
   // { name: "Home", href: "/" },
@@ -75,8 +76,8 @@ font-medium transition-all duration-300 ${
       </nav>
 
       {/* Desktop Button */}
-      <Link
-        href="#download"
+      <ComingSoonButton
+        ariaLabel="Download app"
         className={`hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
           isScrolled
             ? "opacity-100 translate-x-0 bg-orange-500 hover:bg-orange-600 text-white"
@@ -85,7 +86,7 @@ font-medium transition-all duration-300 ${
       >
         <Download size={18} />
         Download App
-      </Link>
+      </ComingSoonButton>
     </div>
   </div>
 </header>

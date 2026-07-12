@@ -401,8 +401,7 @@ export default function OurPresence() {
                     {s.value}
                   </p>
                   <p
-                    className="text-xs sm:text-sm font-medium leading-snug"
-                    text-slate-600
+                    className="text-xs sm:text-sm font-medium leading-snug text-slate-600"
                   >
                     {s.label}
                   </p>

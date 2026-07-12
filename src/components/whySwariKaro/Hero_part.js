@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { ChevronRight, Star } from "lucide-react";
+import ComingSoonButton from "../ui/comingsoon";
 
 
 
@@ -171,9 +172,13 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
             
-            <motion.button
+            <motion.div
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.97 }}
+            >
+            <ComingSoonButton
+              ariaLabel="Download partner app"
+              variant="partner"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base border-2 transition-all duration-200"
               style={{
                 borderColor: "rgba(255,255,255,0.28)",
@@ -182,7 +187,8 @@ export function Hero() {
               }}
             >
               Download Partner App
-            </motion.button>
+            </ComingSoonButton>
+            </motion.div>
           
           </motion.div>
         </div>
@@ -197,7 +203,7 @@ export function Hero() {
       >
         <motion.div
           className="w-px h-10 rounded-full origin-top"
-          style={{ background: "rgba(249,115,22,0.65)" }}
+          style={{ background: "rgba(47, 79, 92, 0.65)" }}
           animate={{ scaleY: [0, 1, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
         />

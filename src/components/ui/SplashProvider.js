@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const TEXTS = [
-  "Har Safar, Apno Ke Saath",
-  "India's Trusted Local Vehicle Rental Platform",
-  "Cars • Bikes • Scooters",
-  "Safe • Affordable • Reliable",
+  
+  "India's Trusted Platform",
+  
 ];
 
 export default function SplashProvider({ children }) {

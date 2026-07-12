@@ -243,7 +243,7 @@ export default function TermsContent() {
      <section
         className="
     
-    relative    overflow-hidden  !py-16 lg:!py-20
+    relative   hero-wrapper  overflow-hidden  !py-16 lg:!py-20
   "
       >
  <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
@@ -272,7 +272,7 @@ export default function TermsContent() {
        
 
         {/* Terms Grid starts here */}
-        <div className=" grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className=" grid gap-8 mt-8 md:grid-cols-2 xl:grid-cols-3">
 
   {terms.slice(0, 12).map((item) => {
     const Icon = item.icon;
@@ -297,9 +297,9 @@ export default function TermsContent() {
 
           </div>
 
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-50">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50">
             <Icon
-              size={24}
+              size={20}
               className="text-orange-500"
             />
           </div>
@@ -317,12 +317,9 @@ export default function TermsContent() {
               className="flex items-start gap-3"
             >
 
-              <span className="mt-[9px] h-2 w-2 rounded-full  bg-slate-600"></span>
+              <span className="mt-2 h-2 w-2 rounded-full  bg-slate-600 flex-shrink-0"></span>
 
-             <p
-                className="text-xs sm:text-sm leading-relaxed text-slate-600"
-                
-              >
+              <p className="text-xs sm:text-sm leading-relaxed text-slate-600">
                 {point}
               </p>
 
@@ -384,11 +381,14 @@ export default function TermsContent() {
               className="flex items-start gap-3"
             >
 
-              <span className="mt-[9px] h-2 w-2 rounded-full  bg-slate-600"></span>
+              <span className="mt-2 h-2 w-2 rounded-full  bg-slate-600 flex-shrink-0"></span>
 
-              <span className="text-[15px] leading-7 text-slate-600">
+               <p
+                        className="text-xs sm:text-sm leading-relaxed text-slate-600"
+
+                      >
                 {point}
-              </span>
+              </p>
 
             </li>
 
@@ -416,29 +416,7 @@ export default function TermsContent() {
 
 {/* Footer Notice */}
 
-<div className="mt-10 rounded-full border border-orange-100 bg-white px-6 py-4 shadow-sm">
 
-  <div className="flex flex-col items-center justify-center gap-3 text-center sm:flex-row">
-
-    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-50">
-
-      <ShieldCheck
-        size={20}
-        className="text-orange-500"
-      />
-
-    </div>
-
-    <p className="text-[15px] font-medium text-[#29566A]">
-
-      By using this Website, you acknowledge that you have read,
-      understood, and agree to these Terms and Conditions.
-
-    </p>
-
-  </div>
-
-</div>
  </section>
 </div>
 

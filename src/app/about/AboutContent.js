@@ -549,17 +549,17 @@ export default function AboutContent() {
 
             {[
               {
-                number: "75,000+",
+                number: "200+",
                 title: "Registered Vehicles",
                 desc: "Cars, Bikes & Scooters available across India.",
               },
               {
-                number: "650+",
+                number: "10+",
                 title: "Cities Connected",
                 desc: "Expanding rapidly into towns and villages.",
               },
               {
-                number: "5,200+",
+                number: "50+",
                 title: "Mobility Partners",
                 desc: "Trusted rental businesses growing with us.",
               },

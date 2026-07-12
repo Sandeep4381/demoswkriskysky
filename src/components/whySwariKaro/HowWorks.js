@@ -66,16 +66,7 @@ export function HowItWorks() {
               >
                 <div className="bg-card rounded-2xl p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border h-full min-h-[260px] relative">
                   {/* Step number badge */}
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.15 + 0.2 }}
-                    className="absolute -top-4 -right-4 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-lg"
-                    style={{ background: 'var(--primary)' }}
-                  >
-                    <span className="text-sm">{step.step}</span>
-                  </motion.div>
+                 
 
                  <motion.div
   initial={{ scale: 0 }}

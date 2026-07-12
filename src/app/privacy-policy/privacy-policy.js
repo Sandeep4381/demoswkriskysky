@@ -154,9 +154,8 @@ const policySections = [
     icon: Mail,
     points: [
       "Swarikaro",
-      "Email: swarikaro@gmail.com",
-      "Website: www.swarikaro.com",
-      "Registered Address: Gijhore, Noida, Uttar Pradesh, India",
+      "Email: karoswari@gmail.com",
+      " Dombivli East,Maharashtra, 421201, India",
     ],
   },
   {
@@ -172,54 +171,54 @@ const policySections = [
 
 export default function PrivacyPolicy() {
   return (
-   <section
-        className="
+    <section
+      className="
     
-    relative    overflow-hidden  !py-16 lg:!py-20
+    relative  hero-wrapper overflow-hidden  !py-16 lg:!py-20
   "
-      >
-     <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+    >
+      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8">
-         <section
-        className="
+        <section
+          className="
     
     relative    overflow-hidden  
   "
-      >
-      
-       <div className="grid items-center gap-8 p-5 sm:p-6 lg:grid-cols-2 lg:p-10">
-  {/* Left Content */}
-  <div className="text-center lg:text-left">
-    <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
-      Privacy <span className="text-orange-500">Policy</span>
-    </h2>
+        >
 
-    <p className="mt-3 text-lg leading-8 text-slate-600">
-      We value your privacy and are committed to protecting your personal
-      information when you visit the Swarikaro website.
-    </p>
+          <div className="grid items-center gap-8 p-5 sm:p-6 lg:grid-cols-2 lg:p-10">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
+                Privacy <span className="text-orange-500">Policy</span>
+              </h2>
 
-    <div className="mx-auto mt-6 grid max-w-xl gap-3 sm:grid-cols-2 lg:mx-0">
-      <div className="rounded-2xl border border-orange-100 bg-orange-50 px-5 py-4 text-center">
-        <p className="text-xs font-bold uppercase tracking-wide text-orange-600">
-          Effective Date
-        </p>
-        <p className="mt-1 font-semibold text-[#29566A]">
-          {effectiveDate}
-        </p>
-      </div>
+              <p className="mt-3 text-lg leading-8 text-slate-600">
+                We value your privacy and are committed to protecting your personal
+                information when you visit the Swarikaro website.
+              </p>
 
-      <div className="rounded-2xl border border-orange-100 bg-orange-50 px-5 py-4 text-center">
-        <p className="text-xs font-bold uppercase tracking-wide text-orange-600">
-          Last Updated
-        </p>
-        <p className="mt-1 font-semibold text-[#29566A]">
-          {effectiveDate}
-        </p>
-      </div>
-    </div>
-    </div>
+              <div className="mx-auto mt-6 grid max-w-xl gap-3 sm:grid-cols-2 lg:mx-0">
+                <div className="rounded-2xl border border-orange-100 bg-orange-50 px-5 py-4 text-center">
+                  <p className="text-xs font-bold uppercase tracking-wide text-orange-600">
+                    Effective Date
+                  </p>
+                  <p className="mt-1 font-semibold text-[#29566A]">
+                    {effectiveDate}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-orange-100 bg-orange-50 px-5 py-4 text-center">
+                  <p className="text-xs font-bold uppercase tracking-wide text-orange-600">
+                    Last Updated
+                  </p>
+                  <p className="mt-1 font-semibold text-[#29566A]">
+                    {effectiveDate}
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <div className="rounded-3xl border border-orange-100 bg-[#F8F4EE] p-6">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500 text-white">
@@ -238,8 +237,8 @@ export default function PrivacyPolicy() {
           </div>
         </section>
 
-       <section
-className="
+        <section
+          className="
 relative
 overflow-hidden
 mt-8
@@ -249,8 +248,8 @@ grid-cols-1
 md:grid-cols-2
 xl:grid-cols-3
 "
->
-         <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
+        >
+          <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />
           {policySections.map((section) => {
             const Icon = section.icon;
 
@@ -278,10 +277,10 @@ xl:grid-cols-3
                   {section.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <span className="mt-[9px] h-2 w-2 shrink-0 rounded-full  bg-slate-600" />
-                       <p
-                className="text-xs sm:text-sm leading-relaxed text-slate-600"
-                
-              >
+                      <p
+                        className="text-xs sm:text-sm leading-relaxed text-slate-600"
+
+                      >
                         {point}
                       </p>
                     </li>
@@ -302,21 +301,7 @@ xl:grid-cols-3
           })}
         </section>
 
-        <section className="mt-10 rounded-3xl border border-orange-100 bg-white px-6 py-6 shadow-sm">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-50">
-              <ShieldCheck size={24} className="text-orange-500" />
-            </div>
-            <div>
-              <h4 className="font-bold text-sm sm:text-base text-slate-600 mb-2">
-                Thank you for visiting Swarikaro.
-              </h4>
-              <p className="mt-1 text-[15px] font-medium text-slate-600">
-                Swarikaro - Apna Safar, Apne Log.
-              </p>
-            </div>
-          </div>
-        </section>
+
       </div>
     </section>
   );

@@ -21,117 +21,215 @@ import {
 } from "lucide-react";
 
 const categories = [
+  { name: "All", icon: Search, color: "text-slate-600", bg: "bg-white" },
+  { name: "General", icon: Car, color: "text-orange-500", bg: "bg-orange-50" },
+  { name: "For Renters", icon: Car, color: "text-slate-600", bg: "bg-slate-100" },
   {
-    name: "General",
-    icon: Car,
-    color: "text-orange-500",
-    bg: "bg-orange-50",
-  },
-  {
-    name: "Renters",
-    icon: Car,
-    color: "text-slate-600",
-    bg: "bg-slate-100",
-  },
-  {
-    name: "Vehicle Owners",
+    name: "For Vehicle Owners & Partners",
     icon: UserRound,
     color: "text-emerald-600",
     bg: "bg-emerald-50",
   },
-  {
-    name: "Rental Shops",
-    icon: Store,
-    color: "text-violet-600",
-    bg: "bg-violet-50",
-  },
-  {
-    name: "Payments & Security",
-    icon: ShieldCheck,
-    color: "text-amber-500",
-    bg: "bg-amber-50",
-  },
-  {
-    name: "App & Account",
-    icon: Smartphone,
-    color: "text-sky-600",
-    bg: "bg-sky-50",
-  },
-  {
-    name: "Support",
-    icon: Headphones,
-    color: "text-pink-500",
-    bg: "bg-pink-50",
-  },
+  { name: "Payments & Security", icon: ShieldCheck, color: "text-amber-500", bg: "bg-amber-50" },
+  { name: "Bookings & Cancellations", icon: Clock3, color: "text-sky-600", bg: "bg-sky-50" },
+  { name: "Support", icon: Headphones, color: "text-pink-500", bg: "bg-pink-50" },
+  { name: "About Swarikaro", icon: Users, color: "text-violet-600", bg: "bg-violet-50" },
 ];
 
 const faqs = [
+  // General
   {
     category: "General",
     question: "What is Swarikaro?",
     answer:
-      "Swarikaro is a vehicle rental platform that connects vehicle owners, rental shops and customers for hourly and daily rentals.",
+      "Swarikaro is a mobility platform that connects vehicle owners, rental shops and customers for vehicle rentals and reservation services across India.",
   },
   {
-    category: "Renters",
+    category: "General",
+    question: "How does Swarikaro work?",
+    answer:
+      "Customers can discover and book nearby vehicles through the SwariKaro User App, while vehicle owners and rental businesses manage their vehicles, bookings and earnings through the SwariKaro Partner App.",
+  },
+  {
+    category: "General",
+    question: "Is Swarikaro available across India?",
+    answer:
+      "Swarikaro is expanding across multiple cities in India. Service availability depends on partner presence in your location.",
+  },
+  {
+    category: "General",
+    question: "Is Swarikaro available on Android and iOS?",
+    answer:
+      "The Swarikaro apps are available through the supported app stores. Please visit the Download App section on our website for the latest availability.",
+  },
+
+  // For Renters
+  {
+    category: "For Renters",
     question: "How can I rent a vehicle?",
     answer:
-      "Browse available vehicles, select your preferred vehicle, upload required documents and confirm your booking.",
+      "Download the Swarikaro User App, browse available vehicles, complete any required verification and confirm your booking.",
   },
   {
-    category: "Renters",
+    category: "For Renters",
     question: "Can I rent a vehicle without a driver?",
     answer:
-      "Yes. Depending on the vehicle and owner, you can rent with or without a driver.",
+      "Yes. Depending on the vehicle and partner, you can choose self-drive or a vehicle with a driver.",
   },
   {
-    category: "Renters",
+    category: "For Renters",
+    question: "What types of vehicles are available?",
+    answer:
+      "Depending on your location, you may find bikes, scooters, cars and other vehicles offered by verified partners.",
+  },
+  {
+    category: "For Renters",
+    question: "Can I book a vehicle in advance?",
+    answer: "Yes. Swarikaro supports both instant and advance bookings, subject to vehicle availability.",
+  },
+  {
+    category: "For Renters",
+    question: "Where do I collect my rental vehicle?",
+    answer:
+      "For rental bookings, you will collect the vehicle from the partner's pickup location. For reservation bookings with a driver, the vehicle may arrive at your selected pickup location.",
+  },
+  {
+    category: "For Renters",
     question: "What documents are required?",
     answer:
-      "A valid Driving License, Aadhaar Card and any other verification requested by the owner.",
+      "Depending on the booking, you may be required to provide a valid Driving Licence, Aadhaar or other verification documents.",
+  },
+
+  // For Vehicle Owners & Partners
+  {
+    category: "For Vehicle Owners & Partners",
+    question: "How can I become a Swarikaro Partner?",
+    answer:
+      "Download the Swarikaro Partner App, register your account, submit the required documents and complete the verification process.",
   },
   {
-    category: "Vehicle Owners",
+    category: "For Vehicle Owners & Partners",
+    question: "Who can become a partner?",
+    answer:
+      "Individual vehicle owners, rental shops, fleet operators and eligible mobility service providers can join Swarikaro, subject to verification.",
+  },
+  {
+    category: "For Vehicle Owners & Partners",
+    question: "Can I list multiple vehicles?",
+    answer: "Yes. Partners can manage one or multiple vehicles from a single Partner account.",
+  },
+  {
+    category: "For Vehicle Owners & Partners",
     question: "How can I list my vehicle?",
     answer:
-      "Create an owner account, submit vehicle details and complete verification to start earning.",
+      "Create a Partner account, add your vehicle details, upload the required documents and complete verification.",
   },
+  {
+    category: "For Vehicle Owners & Partners",
+    question: "Can I update my vehicle availability?",
+    answer: "Yes. You can update your vehicle's availability and pricing anytime through the Partner App.",
+  },
+  {
+    category: "For Vehicle Owners & Partners",
+    question: "Do I need a rental shop to become a partner?",
+    answer:
+      "No. Both individual vehicle owners and registered rental businesses can become partners if they meet the eligibility requirements.",
+  },
+
+  // Payments & Security
   {
     category: "Payments & Security",
     question: "How will I receive payments?",
     answer:
-      "Payments are securely transferred to your registered bank account after booking completion.",
-  },
-  {
-    category: "Rental Shops",
-    question: "How do rental shops manage bookings?",
-    answer:
-      "Rental shops receive a dashboard to manage vehicles, bookings and customers easily.",
+      "Payments are transferred to your registered bank account according to Swarikaro's payout schedule after successful booking completion.",
   },
   {
     category: "Payments & Security",
     question: "Is insurance provided?",
     answer:
-      "Insurance depends on the listed vehicle and owner policy.",
+      "Insurance availability depends on the listed vehicle and the partner's insurance policy.",
   },
+  {
+    category: "Payments & Security",
+    question: "Is my information secure?",
+    answer:
+      "We use reasonable security measures to help protect your information. Please refer to our Privacy Policy for more details.",
+  },
+  {
+    category: "Payments & Security",
+    question: "Are online payments secure?",
+    answer:
+      "Payments are processed through secure payment partners using industry-standard security practices.",
+  },
+
+  // Bookings & Cancellations
+  {
+    category: "Bookings & Cancellations",
+    question: "Can I cancel a booking?",
+    answer:
+      "Yes. Bookings can be cancelled according to Swarikaro's Cancellation Policy. Applicable cancellation charges may apply.",
+  },
+  {
+    category: "Bookings & Cancellations",
+    question: "What happens if my booking is cancelled?",
+    answer:
+      "Refunds and cancellation charges, if applicable, are processed according to the Swarikaro Cancellation Policy.",
+  },
+
+  // Support
   {
     category: "Support",
     question: "How can I contact customer support?",
     answer:
-      "Reach us via phone, email or the Contact Us page.",
+      "You can reach us through phone, email or the Contact Us page on our website.",
+  },
+  {
+    category: "Support",
+    question: "How do I report an issue?",
+    answer:
+      "You can report any issue through the Help section in the Swarikaro app or by contacting our support team.",
+  },
+  {
+    category: "Support",
+    question: "How do I become a business partner?",
+    answer:
+      "Visit the Become a Partner page or download the Swarikaro Partner App to begin the registration process.",
+  },
+
+  // About Swarikaro
+  {
+    category: "About Swarikaro",
+    question: "Does the website allow vehicle bookings?",
+    answer:
+      "No. The Swarikaro website is for informational purposes only. All bookings, payments and vehicle management are handled through the Swarikaro mobile applications.",
+  },
+  {
+    category: "About Swarikaro",
+    question: "Why are there two Swarikaro apps?",
+    answer:
+      "Swarikaro has separate apps for customers and partners. The User App is for discovering and booking vehicles, while the Partner App helps vehicle owners and rental businesses manage their listings, bookings and earnings.",
+  },
+  {
+    category: "About Swarikaro",
+    question: "Is there any registration fee to join Swarikaro?",
+    answer:
+      "Registration requirements and applicable charges, if any, will be communicated during the onboarding process.",
+  },
+  {
+    category: "About Swarikaro",
+    question: "How can I download the Swarikaro apps?",
+    answer:
+      "You can download the Swarikaro User App and Partner App using the links provided on the website or directly from the supported app stores.",
   },
 ];
 
 export default function FAQContent() {
   const [active, setActive] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("General");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [search, setSearch] = useState("");
 
   const filteredFaqs = faqs.filter((item) => {
-    const matchesCategory =
-      selectedCategory === "General"
-        ? true
-        : item.category === selectedCategory;
+    const matchesCategory = selectedCategory === "All" ? true : item.category === selectedCategory;
 
     const matchesSearch =
       item.question.toLowerCase().includes(search.toLowerCase()) ||
@@ -144,7 +242,7 @@ export default function FAQContent() {
     <section
         className="
     
-    relative    overflow-hidden  !py-16 lg:!py-20
+    relative   hero-wrapper  overflow-hidden  !py-16 lg:!py-20
   "
       >
      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
@@ -308,25 +406,25 @@ export default function FAQContent() {
               <div className="mt-6 space-y-3">
 
                 <a
-                  href="mailto:hello@swarikaro.com"
+                  href="mailto:karoswari@gmail.com"
                   className="flex items-center gap-3 rounded-xl border border-orange-100 p-3 text-sm hover:bg-orange-50"
                 >
                   <Mail
                     size={18}
                     className="text-orange-500"
                   />
-                  hello@swarikaro.com
+                  support@swarikaro.com
                 </a>
 
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+91 9082069773"
                   className="flex items-center gap-3 rounded-xl border border-orange-100 p-3 text-sm hover:bg-orange-50"
                 >
                   <Phone
                     size={18}
                     className="text-orange-500"
                   />
-                  +91 99999 99999
+                   +91 9082069773
                 </a>
 
               </div>

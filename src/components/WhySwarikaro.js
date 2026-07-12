@@ -287,7 +287,7 @@ export default function WhySwarikaro() {
 
         {/* Stats */}
 
-        <div className=" border-t border-orange-100 pt-6">
+        <div className=" border-t border-orange-100 pt-8">
 
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 

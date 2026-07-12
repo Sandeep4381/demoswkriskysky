@@ -2,6 +2,7 @@
 
 import { Loader2, Mail, MessageSquare, Phone, Send, User } from "lucide-react";
 import { useState } from "react";
+import SuccessModal from "../ui/SuccessModal";
 
 const initialForm = {
   name: "",
@@ -14,6 +15,7 @@ export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const updateField = (event) => {
     const { name, value } = event.target;
@@ -40,6 +42,7 @@ export default function ContactForm() {
 
       setForm(initialForm);
       setStatus("success");
+      setShowSuccess(true);
       setMessage("Thanks. We've received your message and will reply soon.");
     } catch (error) {
       setStatus("error");
@@ -151,6 +154,11 @@ export default function ContactForm() {
           </p>
         )}
       </form>
+      <SuccessModal
+        open={showSuccess}
+        message={"Thanks. We've received your message and will reply soon."}
+        onClose={() => setShowSuccess(false)}
+      />
     </section>
   );
 }

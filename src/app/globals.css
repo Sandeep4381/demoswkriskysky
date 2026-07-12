@@ -269,7 +269,7 @@ body {
     min-height:700px;
     display:grid;
     align-items:center;
-    padding:40px 5vw;
+    padding:40px 5vw 60px;
 }
 
 /* Laptop */
@@ -277,7 +277,7 @@ body {
     .hero-wrapper{
         min-height:620px;
         padding-top:20px;
-        padding-bottom:20px;
+        padding-bottom:40px;
         align-items:start;
     }
 }
