@@ -160,11 +160,16 @@ export default function App() {
                 <Download className="w-4 h-4" />
                 Download App
               </ComingSoonButton>
-              <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
-                <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm bg-[#29566A] text-white border-2 border-[#29566A] shadow-lg shadow-[#29566A]/20 transition-all hover:scale-105 active:scale-95">
+             <Link href="partner" aria-label="Swarikaro partner" className="flex items-center">
+
+                <button className="flex items-center justify-center gap-2 h-12 w-[195px] px-6 rounded-xl font-bold text-sm bg-white text-[#29566A] border border-[#29566A] shadow-sm transition-all hover:scale-105 active:scale-95">
+
                   <Users className="w-4 h-4" />
+
                   Become a Partner
+
                 </button>
+
               </Link>
 
             </div>

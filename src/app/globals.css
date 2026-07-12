@@ -415,7 +415,7 @@ margin-top:28px;
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:10px;
+gap:6px;
 min-height:120px;
 }
 
@@ -436,7 +436,7 @@ transform:translateY(0);
 }
 
 .loader{
-margin-top:40px;
+margin-top:2px;
 width:240px;
 height:6px;
 background:#ececec;

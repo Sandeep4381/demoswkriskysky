@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const TEXTS = [
-  
-  "India's Trusted Platform",
-  
+  "India's Trusted Platform"
 ];
 
 export default function SplashProvider({ children }) {
@@ -47,6 +45,7 @@ export default function SplashProvider({ children }) {
               height={150}
               priority
               className="splash-logo"
+              style={{ height: 'auto' }}
             />
           </div>
 

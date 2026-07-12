@@ -21,7 +21,7 @@ export function Hero() {
         style={{ background: BG }}
       >
         <img
-          src="/partner/bg-l.png"
+          src="/partner/bg-l.webp"
           alt=""
           aria-hidden="true"
           className="absolute right-0 top-0 h-full w-auto max-w-none"
@@ -52,7 +52,7 @@ export function Hero() {
       {/* ── MOBILE / TABLET: portrait image full-bg ── */}
       <div className="absolute inset-0 z-0 lg:hidden">
         <img
-          src="/partner/bg-m.png"
+          src="/partner/bg-m.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full"

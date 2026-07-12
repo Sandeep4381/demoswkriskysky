@@ -89,7 +89,7 @@ function FeatureChip({ icon: Icon, text }) {
 
 export default function CoreServices() {
   return (
-  <section className="relative overflow-hidden pt-20 pb-10 lg:pt-18 lg:pb-8">
+  <section className="relative overflow-hidden pt-18 pb-10 lg:pt-14 lg:pb-8">
       {/* decorative blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
@@ -119,7 +119,7 @@ export default function CoreServices() {
           <article className="group relative isolate overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <div className="relative h-44 lg:h-48 overflow-hidden">
               <img
-                   src="/core/rental.jpg"
+                   src="/core/rental.webp"
                 alt="Rental vehicle service"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -203,7 +203,7 @@ export default function CoreServices() {
           {/* More Services */}
           <article className="group relative isolate overflow-hidden rounded-3xl shadow-card ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-premium">
             <img
-             src="/core/more.jpg"
+             src="/core/more.webp"
               alt="More services coming soon"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"

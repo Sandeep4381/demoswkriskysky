@@ -176,12 +176,13 @@ export default function Footer() {
                 className="flex justify-center md:inline-flex md:justify-start"
               >
                 <Image
-                  src="/logo.png"
-                  alt="Swarikaro"
-                  width={200}
-                  height={70}
-                  className="h-auto w-[200px] md:w-[200px] lg:w-[200px]"
-                />
+  src="/logo.png"
+  alt="Swarikaro"
+  width={200}
+  height={70}
+  className="w-[160px] md:w-[180px] lg:w-[200px] h-auto"
+  style={{ height: 'auto' }}
+/>
               </Link>
 
               <p className="mt-7 max-w-sm text-xl font-semibold leading-relaxed text-white/82 md:text-lg lg:text-2xl lg:leading-[1.75]">

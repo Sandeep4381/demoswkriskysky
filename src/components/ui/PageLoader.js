@@ -36,17 +36,19 @@ export default function PageLoader() {
 />
 
 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl">
-  <Image
-    src="/assest/icon_logo.png"
-    alt="Logo"
-    width={60}
-    height={60}
-    priority
-    className="rounded-full"
-    style={{
-      animation: "spin 1s linear infinite reverse",
-    }}
-  />
+<Image
+  src="/assest/icon_logo.png"
+  alt="Logo"
+  width={60}
+  height={60}
+  priority
+  className="rounded-full"
+  style={{
+    width: "60px",
+    height: "auto",
+    animation: "spin 1s linear infinite reverse",
+  }}
+/>
 </div>
 
       </div>

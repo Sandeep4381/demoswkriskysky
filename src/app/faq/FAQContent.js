@@ -275,7 +275,7 @@ export default function FAQContent() {
 
 <div className="flex justify-center lg:justify-end lg:translate-x-16">
   <Image
-    src="/faq/faq_boy.png"
+    src="/faq/faq_boy.webp"
     alt="FAQ"
     width={420}
     height={500}

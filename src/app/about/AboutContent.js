@@ -80,7 +80,7 @@ export default function AboutContent() {
 
                 {/* Hero Image */}
                 <Image
-                  src="/about/hero_bg.png"
+                  src="/about/hero_bg.webp"
                   alt="About Swarikaro"
                   width={900}
                   height={750}
@@ -328,7 +328,7 @@ export default function AboutContent() {
             <div className="relative">
               <div className="overflow-hidden rounded-[20px]">
                 <Image
-                  src="/about/story.png"
+                  src="/about/story.webp"
                   alt="Our Story"
                   width={900}
                   height={700}
@@ -418,7 +418,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[20px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_1.png"
+                src="/about/what_about_1.webp"
                 alt="Vehicle Owners"
                 width={600}
                 height={400}
@@ -449,7 +449,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_2.png"
+                src="/about/what_about_2.webp"
                 alt="Rental Shops"
                 width={600}
                 height={400}
@@ -479,7 +479,7 @@ export default function AboutContent() {
             <div className="group overflow-hidden rounded-[28px] border border-orange-100 bg-[#FFF8F1] shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
 
               <Image
-                src="/about/what_about_3.png"
+                src="/about/what_about_3.webp"
                 alt="Customers"
                 width={600}
                 height={400}

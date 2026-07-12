@@ -96,7 +96,7 @@ const sectionRef = useRef(null);
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 lg:py-14 overflow-hidden"
+      className="relative py-14 lg:py-12 overflow-hidden"
       style={{ background: "bg-[#fbf7f0]" }}
     >
        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-orange-200/20 blur-[120px]" />

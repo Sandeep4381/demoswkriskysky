@@ -204,7 +204,7 @@ function CityPin({ city, active, delay = 0 }) {
 
 export default function OurPresence() {
   return (
-    <section className="relative py-20 lg:py-20  overflow-hidden">
+    <section className="relative py-18 lg:py-16 overflow-hidden">
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
 

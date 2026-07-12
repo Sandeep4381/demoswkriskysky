@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const CANONICAL_HOST = "swarikaro.com";
 
-export function middleware(request) {
+export function proxy(request) {
   const url = request.nextUrl.clone();
   const host = request.headers.get("host") || "";
 

@@ -71,7 +71,7 @@ export default function WhySwarikaro() {
     <section
       className="
    
-    relative overflow-hidden hero-wrapper  !py-16 lg:!py-20
+    relative overflow-hidden hero-wrapper  !py-16 lg:!py-18
   "
     >
 
