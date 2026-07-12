@@ -166,7 +166,7 @@ export default function WhySwarikaro() {
             {/* Main Image */}
 
             <Image
-              src="/whySwarikaro/why.png"
+              src="/whySwarikaro/why.webp"
               alt="Why Swarikaro"
               width={720}
               height={720}
