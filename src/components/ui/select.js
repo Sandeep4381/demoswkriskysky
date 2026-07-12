@@ -26,7 +26,7 @@ export const SelectContent = React.forwardRef(({ className, children, ...props }
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
-      className={`z-50 max-h-48 overflow-y-auto rounded-lg border bg-white shadow-lg ${className || ""}`}
+      className={`z-[1000000] max-h-48 overflow-y-auto rounded-lg border bg-white shadow-lg ${className || ""}`}
       {...props}
     >
       <SelectPrimitive.ScrollUpButton className="flex justify-center py-1">
