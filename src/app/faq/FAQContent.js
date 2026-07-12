@@ -247,10 +247,10 @@ export default function FAQContent() {
       >
      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--brand)]/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-[var(--foreground)]/5 blur-3xl" />
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto hero-wrapper px-4 lg:px-8">
 
         {/* Heading */}
-        <div className="text-center hero-wrapper">
+        <div className="text-center ">
          
 
           <h2 className="mt-2 text-3xl font-bold text-[#29566A] md:text-5xl">
